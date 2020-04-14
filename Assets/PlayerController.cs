@@ -5,6 +5,42 @@ using System.IO.Ports;
 
 public class PlayerController : MonoBehaviour{
 
+public float speed = 10.4f;
+public Animator animator;
+
+void Update(){
+
+    Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
+    animator.SetFloat("Horizontal", movement.x);
+    animator.SetFloat("Vertical", movement.y);
+    animator.SetFloat("Magnitude", movement.magnitude);
+    transform.position = transform.position + movement * Time.deltaTime * 4;
+
+}
+    /**
+    Vector3 pos = transform.position;
+
+
+    if(Input.GetKey("w")){
+        pos.y += speed * Time.deltaTime;
+    }
+    if(Input.GetKey("s")){
+        pos.y -= speed * Time.deltaTime;
+    }
+    if(Input.GetKey("d")){
+        pos.x += speed * Time.deltaTime;
+    }
+    if(Input.GetKey("a")){
+        pos.x -= speed * Time.deltaTime;
+    }
+    transform.position = pos;
+}
+*/
+
+/**
+
+ALL THIS CODE IS WHAT WE HAD WHEN WE WERE USING A CONTOLLER
+
     private new Rigidbody2D rigidbody;
     Vector2 velocity;// = new Vector2();
     string buffer;
@@ -70,13 +106,6 @@ public class PlayerController : MonoBehaviour{
                         animator.SetBool("up", false);
                         animator.SetBool("down", false);
                     }
-                    /*
-                    if(z == 1){
-                        GameObject instance = Instantiate(prefab, transform.position, Quaternion.identity);
-                        Rigidbody2D thiccBody = instance.GetComponent<Rigidbody2D>();
-                        thiccBody.AddForce(new Vector3(500, 500, 0));
-                    }
-                    */
                     
                 }  
       
@@ -97,4 +126,5 @@ public class PlayerController : MonoBehaviour{
        Destroy(collider.gameObject);
 
     }
+    */
 }
