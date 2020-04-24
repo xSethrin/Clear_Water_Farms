@@ -15,8 +15,8 @@ public class FieldBuilderScript : MonoBehaviour{
         //make if stament that checks saved data for field.  If it is there instead of making an empty field we can update it to the aved file then paint it.
         //this should be done every game day at the start of the day.
         //this should look for the isWatered.  If it iswatered update the stage and sprite before painting
-        for(int xPos = -1 ; xPos < 14; xPos++){
-            for(int yPos = -14; yPos > -23; yPos--){
+        for(int xPos = 13 ; xPos <= 44 ; xPos++){
+            for(int yPos = -8; yPos >= -28; yPos--){
                 Instantiate (fieldObject, new Vector2(xPos, yPos), fieldObject.rotation);
             }
         }

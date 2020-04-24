@@ -7,16 +7,44 @@ public class PlayerController : MonoBehaviour{
 
 public float speed = 10.4f;
 public Animator animator;
+//public string equipped = "hand"; 
 
 void Update(){
+    
 
     Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
     animator.SetFloat("Horizontal", movement.x);
     animator.SetFloat("Vertical", movement.y);
     animator.SetFloat("Magnitude", movement.magnitude);
     transform.position = transform.position + movement * Time.deltaTime * 4;
-
+    if(Input.GetKey("1")){
+        JackObject.currentTool = "hand";
+        Debug.Log("Switched to hand");
+    }
+    if(Input.GetKey("2")){
+        JackObject.currentTool = "water";
+        Debug.Log("Switched to water");
+    }
+    if(Input.GetKey("3")){
+        JackObject.currentTool = "hoe";
+        Debug.Log("Switched to hoe");
+    }
+    if(Input.GetKey("4")){
+        JackObject.currentTool = "sickle";
+        Debug.Log("Switched to sickle");
+    }
+    
+    if(Input.GetKey("5")){
+        JackObject.currentTool = "hammer";
+        Debug.Log("Switched to hammer");
+    }
+    
+    if(Input.GetKey("6")){
+        JackObject.currentTool = "axe";
+        Debug.Log("Switched to axe");
+    }
 }
+    
     /**
     Vector3 pos = transform.position;
 
