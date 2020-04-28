@@ -5,7 +5,7 @@ using UnityEngine;
 public class cowBehavior : MonoBehaviour{
     public Sprite noCow, cowNotFed, cowFed;
     public bool hasCow, wasFed, hasMilk;
-    int count;//temp int for testing
+    //temp int for testing
     // Start is called before the first frame update
     void Start(){
         
@@ -17,14 +17,18 @@ public class cowBehavior : MonoBehaviour{
     }
     
     void OnMouseDown(){
-        if(count == 0){
-            Debug.Log("bought a cow!");
-            count++;
-            GetComponent<SpriteRenderer>().sprite = cowNotFed;
+        if(hasCow){
+           if(!(wasFed) && JackObject.currentTool == "water"){//need to change from water to fooder
+               GetComponent<SpriteRenderer>().sprite = cowFed;
+               wasFed = true;
+           }
+           if(hasMilk && JackObject.currentTool == "hand"){
+               Debug.Log("Got Milk!");
+               hasMilk = false;
+           }
         }
-        else if(count == 1){
-            Debug.Log("Fed cow!");
-            GetComponent<SpriteRenderer>().sprite = cowFed;
-        }
+    }
+    public void UpdateSprite(){
+        GetComponent<SpriteRenderer>().sprite = cowNotFed;
     }
 }

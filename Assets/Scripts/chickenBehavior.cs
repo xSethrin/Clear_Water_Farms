@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class chickenBehavior : MonoBehaviour{
     public Sprite noChicken, notFed, fed;
-    public bool hasChicken, wasFed, hasEgg;
+    public bool hasChicken = false, wasFed = false, hasEgg = false;
     int count;//temp int for testing
     // Start is called before the first frame update
     void Start(){
@@ -17,14 +17,20 @@ public class chickenBehavior : MonoBehaviour{
     }
     
     void OnMouseDown(){
-        if(count == 0){
-            Debug.Log("bought a chicken!");
-            count++;
-            GetComponent<SpriteRenderer>().sprite = notFed;
-        }
-        else if(count == 1){
-            Debug.Log("Fed chiecken!");
-            GetComponent<SpriteRenderer>().sprite = fed;
+        if(hasChicken){
+            if(!(wasFed) && JackObject.currentTool == "water"){//change to feed
+                wasFed = true;
+                GetComponent<SpriteRenderer>().sprite = fed;
+            }
+            if(hasEgg && JackObject.currentTool == "hand"){
+                Debug.Log("Got Egg!");
+                hasEgg = false;
+            }
         }
     }
+
+    public void UpdateSprite(){
+        GetComponent<SpriteRenderer>().sprite = notFed;
+    }
+
 }
