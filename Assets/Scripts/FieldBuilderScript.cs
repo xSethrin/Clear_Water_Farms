@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class FieldBuilderScript : MonoBehaviour{
 
-    public Transform fieldObject; 
+    public fieldBehavior field; 
+    public List <fieldBehavior> fields = new List<fieldBehavior>();
+    //public int length;
 
     //TODO
     //public feildBehavior [] field;//need to initiate as untilled and unwatered.
@@ -17,7 +19,11 @@ public class FieldBuilderScript : MonoBehaviour{
         //this should look for the isWatered.  If it iswatered update the stage and sprite before painting
         for(int xPos = 13 ; xPos <= 44 ; xPos++){
             for(int yPos = -8; yPos >= -28; yPos--){
-                Instantiate (fieldObject, new Vector2(xPos, yPos), fieldObject.rotation);
+                field = new fieldBehavior();
+                field.transform.position = new Vector2(xPos, yPos);
+                //field = Instantiate (fieldBehavior, new Vector2(xPos, yPos), Quaternion.identity) as fieldBehavior;
+                //length++;'
+                fields.Add(field);
             }
         }
     }
@@ -26,4 +32,5 @@ public class FieldBuilderScript : MonoBehaviour{
     void Update(){
         
     }
+
 }

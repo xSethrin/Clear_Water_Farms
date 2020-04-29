@@ -27,12 +27,12 @@ public class fieldBehavior : MonoBehaviour{
         //we will not allow people to plant in untilled soil
         //make sure to check these things in if statments
 
-        if(JackObject.currentTool == "hoe" && !(isTilled)){//change to hoe equipted
+        if(JackObject.currentTool == "hoe" && !(isTilled) && !(hasPlant)){//
             Debug.Log("Field was tilled!");
             GetComponent<SpriteRenderer>().sprite = tilled;
             isTilled = true;
         }
-        else if(JackObject.currentTool == "hand" && isTilled){//need to set up a way to use seeds.
+        else if(JackObject.currentTool == "hand" && isTilled && !(hasPlant)){//need to set up a way to use seeds.
             Debug.Log("Seed planted! at stage 1");
             GetComponent<SpriteRenderer>().sprite = stage1;
             currentStage = 1;
@@ -43,18 +43,25 @@ public class fieldBehavior : MonoBehaviour{
                 Debug.Log("Stage 1 watered");
                 GetComponent<SpriteRenderer>().sprite = stage1W;
                 timesWatered++;
+                isWatered = true;
             }
             else if(currentStage == 2){
                 Debug.Log("Stage 2 watered");
                 GetComponent<SpriteRenderer>().sprite = stage2W;
                 timesWatered++;
+                isWatered = true;
             }
         }
         else if(JackObject.currentTool == "hand" && currentStage == 3){
             Debug.Log("picking plant");
             GetComponent<SpriteRenderer>().sprite = tilled;
+            hasPlant = false;
+            isWatered = false;
+            isTilled = true;
+            currentStage = 0;
+            timesWatered = 0;
         }
-         else if(JackObject.currentTool == "hammer" && !(hasPlant)){
+         else if(JackObject.currentTool == "hammer" && !(hasPlant) && isTilled){
             Debug.Log("untilling land");
             GetComponent<SpriteRenderer>().sprite = untilled;
         }
@@ -70,6 +77,18 @@ public class fieldBehavior : MonoBehaviour{
             GetComponent<SpriteRenderer>().sprite = tilled;
          }
          */
+    }
+
+    public void UpdateSprite(int plantStage){
+        if(plantStage == 1){
+            GetComponent<SpriteRenderer>().sprite = stage1;
+        }
+        else if(plantStage == 2){
+            GetComponent<SpriteRenderer>().sprite = stage2;
+        }
+        else if (plantStage == 3){
+            GetComponent<SpriteRenderer>().sprite = stage3;
+        }
     }
     
 }

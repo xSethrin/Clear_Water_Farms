@@ -132229,8 +132229,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d6064be859933a438985a25d3e94c21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   index: 5
 --- !u!61 &905249599
 BoxCollider2D:
@@ -132675,8 +132675,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d6064be859933a438985a25d3e94c21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   index: 4
 --- !u!1 &1592201792
 GameObject:
@@ -132715,7 +132715,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -132729,8 +132729,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e91dee0a4e4699945a7fd0a71bdaafa7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   speed: 18
   animator: {fileID: 1592201793}
 --- !u!50 &1592201795
@@ -132853,15 +132853,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f12d1d1484cd24449944f05a12bb64c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stam: 100
-  gold: 500
-  water: 1
-  hoe: 1
-  sickel: 1
-  hammer: 1
-  axe: 1
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1001 &1690027141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -136523,8 +136516,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d6064be859933a438985a25d3e94c21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   index: 2
 --- !u!60 &1739343981
 PolygonCollider2D:
@@ -136753,8 +136746,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d6064be859933a438985a25d3e94c21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   index: 0
 --- !u!61 &1974687634
 BoxCollider2D:
