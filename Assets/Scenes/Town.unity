@@ -146,13 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f12d1d1484cd24449944f05a12bb64c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stam: 100
-  gold: 500
-  water: 1
-  hoe: 1
-  sickel: 1
-  hammer: 1
-  axe: 1
 --- !u!61 &88518858
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -289,7 +282,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 88518856}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -50.77, y: 30.36, z: 0}
+  m_LocalPosition: {x: -17.63, y: 9.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1062838449}
@@ -3589,10 +3582,67 @@ MonoBehaviour:
   m_GameObject: {fileID: 421729470}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d6064be859933a438985a25d3e94c21, type: 3}
+  m_Script: {fileID: 11500000, guid: 644e2fae65b72dc48b70d3283c670569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 1
+  toScene: Cross_Roads
+--- !u!1 &531333762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 531333764}
+  - component: {fileID: 531333763}
+  - component: {fileID: 531333765}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &531333763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531333762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61f01bcf2d1b1f343af1164105c21872, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &531333764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531333762}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.936438, y: -15.55322, z: -0.16015625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &531333765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531333762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9574322446a2cb44ea382e24220b458a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 88518863}
 --- !u!1 &822666177
 GameObject:
   m_ObjectHideFlags: 0
