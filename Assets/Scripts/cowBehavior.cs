@@ -7,7 +7,7 @@ using UnityEngine;
 * It also defines their behavior
 */
 public class CowBehavior : MonoBehaviour{
-    public Sprite noCow, cowNotFed, cowFed;//sprites for cows
+    public Sprite noCow, cowNotFed, cowFed, milk;//sprites for cows
     public bool hasCow, wasFed, hasMilk;//booleans for cow data
 
     /**
@@ -21,7 +21,19 @@ public class CowBehavior : MonoBehaviour{
                wasFed = true;
            }
            if(hasMilk && JackObject.currentTool == "hand"){//if statment to milk cow
-               Debug.Log("Got Milk!");
+                //Adding to inventory
+                bool flag = true;
+                for (int i = 0; i < JackObject.slots.Count; i++) {
+                    if (JackObject.slots[i].nameOf == "milk") {
+                        flag = false;
+                        JackObject.slots[i].quantity++;
+                        break;
+                    }
+                }
+                if (flag) {
+                    JackObject.slots.Add(new Produce("milk", 100, 1, milk));
+                }
+                Debug.Log("Got Milk!");
                hasMilk = false;
            }
         }
