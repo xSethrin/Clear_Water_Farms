@@ -12,6 +12,24 @@ EditorBuildSettings:
     path: Assets/Scenes/Farm.unity
     guid: b6e89287c00aae54b8f8956904099cf9
   - enabled: 0
-    path: Assets/Farm_House_Interrior.unity
+    path: 
     guid: cc68fc4b63d5ea5469940e9c08358e82
+  - enabled: 1
+    path: Assets/Scenes/Farm_Barn_Interrior.unity
+    guid: 23034e9dafbd81c4fa18e135d5d50b62
+  - enabled: 1
+    path: Assets/Scenes/Town.unity
+    guid: 45a866c054ca7c44e9dc59e141772963
+  - enabled: 1
+    path: Assets/Scenes/Farm_Coop_Interrior.unity
+    guid: 4337b7b40146bf34da4627f49df5386b
+  - enabled: 1
+    path: Assets/Scenes/Cross_Roads.unity
+    guid: 178bb4165b3040a41b5c66db4ca51f48
+  - enabled: 1
+    path: Assets/Scenes/Forest.unity
+    guid: 671d786f3a489cf4fa18b6030d0ae5ac
+  - enabled: 1
+    path: Assets/Scenes/Cave.unity
+    guid: 2c38df1d93f6879409e92b6d5bc8aece
   m_configObjects: {}
