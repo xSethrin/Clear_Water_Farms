@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FieldBuilderScript : MonoBehaviour{
-
+/*
     public fieldBehavior field; 
     public List <fieldBehavior> fields = new List<fieldBehavior>();
     //public int length;
@@ -32,5 +32,5 @@ public class FieldBuilderScript : MonoBehaviour{
     void Update(){
         
     }
-
+*/
 }

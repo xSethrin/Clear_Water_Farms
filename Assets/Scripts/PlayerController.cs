@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour{
 
 public float speed = 10.4f;
 public Animator animator;
-//public string equipped = "hand"; 
 
 void Update(){
     
