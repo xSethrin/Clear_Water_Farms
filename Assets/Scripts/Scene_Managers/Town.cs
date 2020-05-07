@@ -27,6 +27,21 @@ public class Town : SceneController
             player.position = new Vector2(42.49f, -49.96f);
 
         }
+        else if (prevScene == "Blacksmith_Store_Interrior")
+        {
+            player.position = new Vector2(-23.93f, 2.36f);
+
+        }
+        else if (prevScene == "Plant_Store_Interrior")
+        {
+            player.position = new Vector2(-11.73f, 23.21f);
+
+        }
+        else if (prevScene == "Animal_Store_Interrior")
+        {
+            player.position = new Vector2(-23.93f, 14.35f);
+
+        }
 
 
     }
