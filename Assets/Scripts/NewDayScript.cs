@@ -20,6 +20,8 @@ public class NewDayScript : MonoBehaviour{
         GameObject [] plants = GameObject.FindGameObjectsWithTag("Plant");//finds all the plants
         GameObject [] cows = GameObject.FindGameObjectsWithTag("Cow");//finds all the cows
         GameObject [] chickens = GameObject.FindGameObjectsWithTag("Chicken");//finds all the chickens
+        GameObject [] rocks = GameObject.FindGameObjectsWithTag("Rock");
+        GameObject [] trees = GameObject.FindGameObjectsWithTag("Tree");
         foreach(GameObject plant in plants){//loops through all the plants
             PlantBehavior plantData = plant.GetComponent<PlantBehavior>();///gets plant data
             if(plantData.timesWatered == 3){//if plant was watered 3 times it is ready to grow to the next stage
@@ -53,6 +55,14 @@ public class NewDayScript : MonoBehaviour{
             }
            chickenData.wasFed = false;//resets was fed every day
            chickenData.UpdateSprite();//changes sprite to that of the hungry chickie
+        }
+        foreach(GameObject rock in rocks){//grabs each rock in game world
+            RockBehavior rockData = rock.GetComponent<RockBehavior>();//gets rock behavior component
+            rockData.ResetRock();//resets each rock
+        }
+        foreach(GameObject tree in trees){//grabs each tree in game world
+            TreeBehavior treeData = tree.GetComponent<TreeBehavior>();//get tree data
+            treeData.ResetTree();//resets each tree
         }
         Debug.Log("Jack Stamina: " + jack.stam);
         SaveSystem save = new SaveSystem();//creates a save object

@@ -34,7 +34,7 @@ public class CowBehavior : MonoBehaviour{
                     JackObject.slots.Add(new Produce("milk", 100, 1, milk));
                 }
                 Debug.Log("Got Milk!");
-               hasMilk = false;
+                hasMilk = false;
            }
         }
     }

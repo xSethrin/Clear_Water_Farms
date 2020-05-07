@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /**
-* Thios class runs the load function.
+* This class runs the load function.
 * It takes the binary file and changes it back to primative data types
 * This data is then put back into their game objects
 */
@@ -39,6 +39,8 @@ public class LoadGame : MonoBehaviour{
         jack.sickle = playerData[3];
         jack.hammer = playerData[4];
         jack.axe = playerData[5];
+        jack.lumber = playerData[6];
+        jack.ore = playerData[7];
         int i = 0;//variable for incrimenting through the cow, chicken, and plant objects
         foreach(GameObject cow in cows){//loop through each cow object
             CowBehavior cowData = cow.GetComponent<CowBehavior>();//grabs the cow behavior which holds cow data
@@ -96,6 +98,17 @@ public class LoadGame : MonoBehaviour{
             }
             plantData.isWatered = false;
             plantData.UpdateSprite(currentStage[i]);
+        }
+        //The following code is needed incase the player loads a game mid day without saving
+        GameObject [] rocks = GameObject.FindGameObjectsWithTag("Rock");
+        GameObject [] trees = GameObject.FindGameObjectsWithTag("Tree");
+        foreach(GameObject rock in rocks){//grabs each rock in game world
+            RockBehavior rockData = rock.GetComponent<RockBehavior>();//gets rock behavior component
+            rockData.ResetRock();//resets each rock
+        }
+        foreach(GameObject tree in trees){//grabs each tree in game world
+            TreeBehavior treeData = tree.GetComponent<TreeBehavior>();//get tree data
+            treeData.ResetTree();//resets each tree
         }
     }
 }

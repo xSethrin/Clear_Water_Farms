@@ -8,6 +8,8 @@ TagManager:
   - Plant
   - Cow
   - Chicken
+  - Rock
+  - Tree
   layers:
   - Default
   - TransparentFX

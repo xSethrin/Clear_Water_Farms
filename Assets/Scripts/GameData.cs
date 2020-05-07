@@ -8,7 +8,8 @@ using UnityEngine;
 [System.Serializable]//this allows the object to be converted into a binary form and saved to a file
 public class GameData {
 
-    public int [] playerData = new int [6];//int array for Player data
+    public int [] playerData = new int [8];//int array for Player data
+    //TODO add player inventory
     public int [] hasCow;//int array for cow bool
     public int [] hasMilk;//int array for milk bool
     public int [] hasChicken;//int array for chicken bool
@@ -33,6 +34,8 @@ public class GameData {
         playerData[3] = jack.sickle;
         playerData[4] = jack.hammer;
         playerData[5] = jack.axe;
+        playerData[6] = jack.lumber;
+        playerData[7] = jack.ore;
         hasCow = new int [cows.Length];//instantiates hasCow array 
         hasMilk = new int [cows.Length];//instantiate hasMilk array
         for(int i = 0; i < cows.Length; i++){//loops through the cows

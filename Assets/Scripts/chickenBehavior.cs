@@ -30,30 +30,14 @@ public class ChickenBehavior : MonoBehaviour{
                         break;
                     }
                 }
-                if (flag) {
+                if(flag) {
                     JackObject.slots.Add(new Produce("egg", 100, 1, egg));
                 }
-
-                    //if (other.CompareTag("Player")) {
-                    //    for (int i = 0; i < inventory.slots.Length; i++) {
-                    //        //if()
-                    //        //checking each slot to see if there is a free space
-                    //        if (inventory.isFull[i] == false) {
-                    //            //Item can be added
-                    //            inventory.isFull[i] = true;
-                    //            //button to be able to use object in slot
-                    //            Instantiate(itemButton, inventory.slots[i].transform, false);
-                    //            Destroy(gameObject);//removes object from scene
-                    //            Debug.Log("Item has been picked up");
-                    //            break;
-                    //        }
-                    //    }
-                    //}
-                }
-                Debug.Log("Got Egg!");
+                 Debug.Log("Got Egg!");
                 hasEgg = false;
-            }
+            }       
         }
+    }
     
 
     /**
