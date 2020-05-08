@@ -33,7 +33,7 @@ public class ChickenBehavior : MonoBehaviour{
                 if(flag) {
                     JackObject.slots.Add(new Produce("egg", 100, 1, egg));
                 }
-                 Debug.Log("Got Egg!");
+                Debug.Log("Got Egg!");
                 hasEgg = false;
             }       
         }

@@ -8717,7 +8717,6 @@ GameObject:
   - component: {fileID: 1614388672}
   - component: {fileID: 1614388671}
   - component: {fileID: 1614388670}
-  - component: {fileID: 1614388669}
   m_Layer: 0
   m_Name: jack
   m_TagString: Player
@@ -8725,18 +8724,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1614388669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1614388668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f12d1d1484cd24449944f05a12bb64c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1614388670
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8796,6 +8783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 18
   animator: {fileID: 1614388671}
+  tools: []
 --- !u!50 &1614388673
 Rigidbody2D:
   serializedVersion: 4
@@ -8862,7 +8850,7 @@ SpriteRenderer:
   m_Size: {x: 1.14, y: 3.14}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1614388675

@@ -81428,7 +81428,6 @@ GameObject:
   - component: {fileID: 1592201794}
   - component: {fileID: 1592201793}
   - component: {fileID: 1592201798}
-  - component: {fileID: 1592201799}
   m_Layer: 0
   m_Name: jack
   m_TagString: Player
@@ -81580,28 +81579,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.58629227, y: 0.2536049}
   m_EdgeRadius: 0
---- !u!114 &1592201799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1592201792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f12d1d1484cd24449944f05a12bb64c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stam: 100
-  gold: 500
-  water: 1
-  hoe: 1
-  sickle: 1
-  hammer: 1
-  axe: 1
-  ore: 0
-  lumber: 0
-  isFull: 000000000000
 --- !u!1001 &1603880931
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -25,22 +25,22 @@ public class LoadGame : MonoBehaviour{
         int [] timesWatered = data.timesWatered;
         int [] isTilled = data.isTilled;
         int [] hasPlant = data.hasPlant;
-        GameObject [] players = GameObject.FindGameObjectsWithTag("Player");//finds the player
-        JackObject jack = players[0].GetComponent<JackObject>();//gets the JackObject component
-        jack.stam = 100;//restes jacks stamina
+        //GameObject [] players = GameObject.FindGameObjectsWithTag("Player");//finds the player
+        //JackObject jack = players[0].GetComponent<JackObject>();//gets the JackObject component
+        JackObject.stam = 100;//restes jacks stamina
         //GameObject [] plants = GameObject.FindGameObjectsWithTag("Plant");//gets the plant objects
         GameObject [] cows = GameObject.FindGameObjectsWithTag("Cow");//gets the cow objects
         GameObject [] chickens = GameObject.FindGameObjectsWithTag("Chicken");//gets the chicken objects
         GameObject [] plants = GameObject.FindGameObjectsWithTag("Plant");//gets all plant objects
         //the following lines set all of jacks data back to what was saved
-        jack.gold = playerData[0];
-        jack.water = playerData[1];   
-        jack.hoe = playerData[2];
-        jack.sickle = playerData[3];
-        jack.hammer = playerData[4];
-        jack.axe = playerData[5];
-        jack.lumber = playerData[6];
-        jack.ore = playerData[7];
+        JackObject.gold = playerData[0];
+        JackObject.water = playerData[1];   
+        JackObject.hoe = playerData[2];
+        JackObject.sickle = playerData[3];
+        JackObject.hammer = playerData[4];
+        JackObject.axe = playerData[5];
+        JackObject.lumber = playerData[6];
+        JackObject.ore = playerData[7];
         int i = 0;//variable for incrimenting through the cow, chicken, and plant objects
         foreach(GameObject cow in cows){//loop through each cow object
             CowBehavior cowData = cow.GetComponent<CowBehavior>();//grabs the cow behavior which holds cow data

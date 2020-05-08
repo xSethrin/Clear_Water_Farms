@@ -10,13 +10,13 @@ public class TreeBehavior : MonoBehaviour{
 
 
     void OnMouseDown(){
-        GameObject [] players = GameObject.FindGameObjectsWithTag("Player");//finds the player object
-        JackObject jack = players[0].GetComponent<JackObject>();//gets player data
+        //GameObject [] players = GameObject.FindGameObjectsWithTag("Player");//finds the player object
+        //JackObject jack = players[0].GetComponent<JackObject>();//gets player data
         if(JackObject.currentTool == "axe"  && notChopped){
             if(isBig){
                 if(timesHit >= 5){
                     GetComponent<SpriteRenderer>().sprite = noTree;
-                    jack.lumber+= 3;
+                    JackObject.lumber+= 3;
                     notChopped = false;
                 }
                 else{
@@ -26,7 +26,7 @@ public class TreeBehavior : MonoBehaviour{
             else{
                 if(timesHit >= 3){
                     GetComponent<SpriteRenderer>().sprite = noTree;
-                    jack.lumber+= 1;
+                    JackObject.lumber+= 1;
                     notChopped = false;
                 }
                 else{

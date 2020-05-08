@@ -14,6 +14,7 @@ public class SaveSystem {
     * This method takes a GameData object as a paramater.
     */ 
     public void SaveGame(GameData data){
+    
         BinaryFormatter formatter = new BinaryFormatter();//creates a binary formatter object.  This object takes the data and converts it to binary and writes it to a file
         string path = Application.persistentDataPath + "/save.data";//this creates a string of a path to where the game will be saved
         FileStream stream = new FileStream(path, FileMode.Create);//This opens the file stream

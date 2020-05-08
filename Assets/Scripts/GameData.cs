@@ -25,17 +25,17 @@ public class GameData {
     * it requires GameObject player, GameObject [] cows, GameObject [] chickens and GameObject [] plants
     * each objected will be parsed and data from these objects that needs to be saved will be stored
     */
-    public GameData(GameObject player, GameObject [] cows, GameObject [] chickens, GameObject [] plants){
-        JackObject jack = player.GetComponent<JackObject>();//grabs the players data
+    public GameData(GameObject [] cows, GameObject [] chickens, GameObject [] plants){
+        //JackObject jack = player.GetComponent<JackObject>();//grabs the players data
         //these lines set the players data to the array         
-        playerData[0] = jack.gold;
-        playerData[1] = jack.water;   
-        playerData[2] = jack.hoe;
-        playerData[3] = jack.sickle;
-        playerData[4] = jack.hammer;
-        playerData[5] = jack.axe;
-        playerData[6] = jack.lumber;
-        playerData[7] = jack.ore;
+        playerData[0] = JackObject.gold;
+        playerData[1] = JackObject.water;   
+        playerData[2] = JackObject.hoe;
+        playerData[3] = JackObject.sickle;
+        playerData[4] = JackObject.hammer;
+        playerData[5] = JackObject.axe;
+        playerData[6] = JackObject.lumber;
+        playerData[7] = JackObject.ore;
         hasCow = new int [cows.Length];//instantiates hasCow array 
         hasMilk = new int [cows.Length];//instantiate hasMilk array
         for(int i = 0; i < cows.Length; i++){//loops through the cows

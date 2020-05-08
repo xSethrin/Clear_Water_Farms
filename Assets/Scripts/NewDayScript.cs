@@ -13,9 +13,9 @@ public class NewDayScript : MonoBehaviour{
     * It is ran when the player goes to sleep (clicks on the bed)
     */
     void OnMouseDown(){
-        GameObject [] players = GameObject.FindGameObjectsWithTag("Player");//finds the player object
-        JackObject jack = players[0].GetComponent<JackObject>();//gets player data
-        jack.stam = 100;//resets stamina
+        //GameObject [] players = GameObject.FindGameObjectsWithTag("Player");//finds the player object
+        //JackObject jack = players[0].GetComponent<JackObject>();//gets player data
+        JackObject.stam = 100;//resets stamina
         //Debug.Log("Reset Jack's Stamina");
         GameObject [] plants = GameObject.FindGameObjectsWithTag("Plant");//finds all the plants
         GameObject [] cows = GameObject.FindGameObjectsWithTag("Cow");//finds all the cows
@@ -64,8 +64,7 @@ public class NewDayScript : MonoBehaviour{
             TreeBehavior treeData = tree.GetComponent<TreeBehavior>();//get tree data
             treeData.ResetTree();//resets each tree
         }
-        Debug.Log("Jack Stamina: " + jack.stam);
         SaveSystem save = new SaveSystem();//creates a save object
-        save.SaveGame(new GameData(players[0], cows, chickens, plants));//saves your game
+        save.SaveGame(new GameData(cows, chickens, plants));//saves your game
     }
 }
