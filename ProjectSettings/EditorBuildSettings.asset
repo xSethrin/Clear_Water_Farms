@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: d67afb90fb8e6fa409b9c668fa2d8789
+  - enabled: 1
     path: Assets/Scenes/Farm/Farm_House_Interrior.unity
     guid: 3e3014a73911f8049a180eb0aa8495ea
   - enabled: 1
@@ -13,7 +16,7 @@ EditorBuildSettings:
     guid: b6e89287c00aae54b8f8956904099cf9
   - enabled: 0
     path: 
-    guid: cc68fc4b63d5ea5469940e9c08358e82
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Farm/Farm_Barn_Interrior.unity
     guid: 23034e9dafbd81c4fa18e135d5d50b62
