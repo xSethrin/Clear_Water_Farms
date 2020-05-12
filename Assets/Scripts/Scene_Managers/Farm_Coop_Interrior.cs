@@ -17,7 +17,22 @@ public class Farm_Coop_Interrior : SceneController
             player.position = new Vector2(0f, 4.143f);
 
         }
+        GameObject [] chickens = GameObject.FindGameObjectsWithTag("Chicken");//finds all the plants
+        int i = 0;
+        foreach(GameObject chicken in chickens){
+            ChickenBehavior data = chicken.GetComponent<ChickenBehavior>();
+            if(FarmData.chickenData == null){
+                data.hasChicken = false;
+                data.wasFed = false;
+                data.hasEgg = false;
+            } 
+            else{
+                data.hasChicken = FarmData.chickenData[i].GetComponent<ChickenBehavior>().hasChicken;
+                data.wasFed = FarmData.chickenData[i].GetComponent<ChickenBehavior>().wasFed;
+                data.hasEgg = FarmData.chickenData[i].GetComponent<ChickenBehavior>().hasEgg;
+            }
+            i++;
+        }
     }
 
 }
-

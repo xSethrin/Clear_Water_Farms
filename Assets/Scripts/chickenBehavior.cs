@@ -23,14 +23,14 @@ public class ChickenBehavior : MonoBehaviour{
             if(hasEgg && JackObject.currentTool == "hand"){//this checks if the chicken laid an egg and gives one tp the player if true
                 //Adding to inventory
                 bool flag = true;
-                for (int i = 0; i < JackObject.slots.Count; i++) {
+                for (int i = 0; i < JackObject.slots.Count; i++) {//checks if egg object is already in inventory
                     if(JackObject.slots[i].nameOf == "egg") {
                         flag = false;
                         JackObject.slots[i].quantity++;
                         break;
                     }
                 }
-                if(flag) {
+                if(flag) {//if no egg objecy is in inventory
                     JackObject.slots.Add(new Produce("egg", 100, 1, egg));
                 }
                 Debug.Log("Got Egg!");

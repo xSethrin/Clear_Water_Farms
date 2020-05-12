@@ -96,6 +96,7 @@ MonoBehaviour:
   noChicken: {fileID: 21300000, guid: ade211879ea9f6544a7d84a2ddb3c149, type: 3}
   notFed: {fileID: 21300000, guid: 60de59e12d2e8c44b9ccad648a2a9106, type: 3}
   fed: {fileID: 21300000, guid: 1aa1871533c01094fba30f35a1b064a2, type: 3}
+  egg: {fileID: 21300000, guid: f9d5f6c601143c74e9618234b90237ea, type: 3}
   hasChicken: 0
   wasFed: 0
   hasEgg: 0
@@ -116,7 +117,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2.56}
+    oldSize: {x: 1, y: 1.28}
     newSize: {x: 1, y: 1.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

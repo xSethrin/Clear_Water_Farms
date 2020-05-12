@@ -96,6 +96,7 @@ MonoBehaviour:
   noCow: {fileID: 21300000, guid: 3a26b5e3d1df1dd408e0a3e927479c4a, type: 3}
   cowNotFed: {fileID: 21300000, guid: 5957c4fc67e6cbd47b3774ebe76ebcf1, type: 3}
   cowFed: {fileID: 21300000, guid: 7e1a1a9abe488cc429fd9711d3798a7d, type: 3}
+  milk: {fileID: 21300000, guid: cc5219dbd67d9a242a3389704490d8a3, type: 3}
   hasCow: 0
   wasFed: 0
   hasMilk: 0
@@ -116,7 +117,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.45, y: 3.425}
+    oldSize: {x: 2.18, y: 1.37}
     newSize: {x: 2.18, y: 1.37}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

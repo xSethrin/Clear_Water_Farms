@@ -25,13 +25,11 @@ public class LoadGame : MonoBehaviour{
         int [] timesWatered = data.timesWatered;
         int [] isTilled = data.isTilled;
         int [] hasPlant = data.hasPlant;
-        //GameObject [] players = GameObject.FindGameObjectsWithTag("Player");//finds the player
-        //JackObject jack = players[0].GetComponent<JackObject>();//gets the JackObject component
         JackObject.stam = 100;//restes jacks stamina
         //GameObject [] plants = GameObject.FindGameObjectsWithTag("Plant");//gets the plant objects
-        GameObject [] cows = GameObject.FindGameObjectsWithTag("Cow");//gets the cow objects
-        GameObject [] chickens = GameObject.FindGameObjectsWithTag("Chicken");//gets the chicken objects
-        GameObject [] plants = GameObject.FindGameObjectsWithTag("Plant");//gets all plant objects
+        //GameObject [] cows = GameObject.FindGameObjectsWithTag("Cow");//gets the cow objects
+        //GameObject [] chickens = GameObject.FindGameObjectsWithTag("Chicken");//gets the chicken objects
+       // GameObject [] plants = GameObject.FindGameObjectsWithTag("Plant");//gets all plant objects
         //the following lines set all of jacks data back to what was saved
         JackObject.gold = playerData[0];
         JackObject.water = playerData[1];   
@@ -41,74 +39,63 @@ public class LoadGame : MonoBehaviour{
         JackObject.axe = playerData[5];
         JackObject.lumber = playerData[6];
         JackObject.ore = playerData[7];
-        int i = 0;//variable for incrimenting through the cow, chicken, and plant objects
-        foreach(GameObject cow in cows){//loop through each cow object
-            CowBehavior cowData = cow.GetComponent<CowBehavior>();//grabs the cow behavior which holds cow data
+        //int i = 0;//variable for incrimenting through the cow, chicken, and plant objects
+        for(int i = 0; i < 10; i ++){//loop through each cow object
+            //CowBehavior cowData = cow.GetComponent<CowBehavior>();//grabs the cow behavior which holds cow data
             if(hasCow[i] == 1){//checks if has cow is true
-                cowData.hasCow = true;//sets to true
+                FarmData.hasCow[i] = true;//sets to true
             }
             else{
-                cowData.hasCow = false;//set false
+                FarmData.hasCow[i] = false;//set false
             }
             if(hasMilk[i] == 1){//checks if cow has milk
-                cowData.hasMilk = true;//sets true
+                FarmData.hasMilk[i] = true;//sets true
             }
             else{
-                cowData.hasMilk = false;//sets false
+                FarmData.hasMilk[i] = false;//sets false
             }
-            cowData.wasFed = false;//wasFed set is always set to false. THIS IS NEEDED TO PREVENT BUGS IF PLAYER LOADS GAME WHILE PLAYING WITHOUT SAVING 1ST
-            cowData.UpdateSprite();//updates cow sprite
-            i++;
+            FarmData.cowWasFed[i] = false;//wasFed set is always set to false. THIS IS NEEDED TO PREVENT BUGS IF PLAYER LOADS GAME WHILE PLAYING WITHOUT SAVING 1ST
+            //cowData.UpdateSprite();//updates cow sprite
+            //i++;
         }
-        i = 0;//resest i for chickens
-        foreach(GameObject chicken in chickens){
-            ChickenBehavior chickenData = chicken.GetComponent<ChickenBehavior>();//grab chicken behavior
+        //i = 0;//resest i for chickens
+        for(int i = 0; i < 10; i++){
+            //ChickenBehavior chickenData = chicken.GetComponent<ChickenBehavior>();//grab chicken behavior
             if(hasChicken[i] == 1){//check if has chicken is true
-                chickenData.hasChicken = true;
+                FarmData.hasChicken[i] = true;
             }
             else{
-                chickenData.hasChicken = false;
+                FarmData.hasChicken[i] = false;
             }
             if(hasEgg[i] == 1){//check if has egg is true
-                chickenData.hasEgg = true;
+                FarmData.hasEgg[i] = true;
             }
             else{
-                chickenData.hasEgg = false;
+                FarmData.hasEgg[i] = false;
             }
-            chickenData.wasFed = false;//always set to false, needed to prevent bugs
-            chickenData.UpdateSprite();//updates sprite
-            i++;
+            FarmData.chickenWasFed[i] = false;//always set to false, needed to prevent bugs
+            //chickenData.UpdateSprite();//updates sprite
+            //i++;
         }
-        i = 0;//restes i for plants
-        foreach(GameObject plant in plants){
-            PlantBehavior plantData = plant.GetComponent<PlantBehavior>();
-            plantData.currentStage = currentStage[i];//sets current stage for plant
-            plantData.timesWatered = timesWatered[i];//sets times watered for plant
+        //i = 0;//restes i for plants
+        for(int i = 0; i < 255; i++){
+            //PlantBehavior plantData = plant.GetComponent<PlantBehavior>();
+            FarmData.currentStage[i] = currentStage[i];//sets current stage for plant
+            FarmData.timesWatered[i] = timesWatered[i];//sets times watered for plant
             if(isTilled[i] == 1){//sets value for tilled
-                plantData.isTilled = true;
+                FarmData.isTilled[i] = true;
             }
             else{
-                plantData.isTilled = false;
+                FarmData.isTilled[i] = false;
             }
             if(hasPlant[i] == 1){//sets value for hasplant
-                plantData.hasPlant = true;
+                FarmData.hasPlant[i] = true;
             }
             else{
-                plantData.hasPlant = false;
+                FarmData.hasPlant[i] = false;
             }
-            plantData.isWatered = false;
-            plantData.UpdateSprite(currentStage[i]);
-        }
-        //The following code is needed incase the player loads a game mid day without saving
-        GameObject [] rocks = GameObject.FindGameObjectsWithTag("Rock");
-        GameObject [] trees = GameObject.FindGameObjectsWithTag("Tree");
-        foreach(GameObject rock in rocks){//grabs each rock in game world
-            RockBehavior rockData = rock.GetComponent<RockBehavior>();//gets rock behavior component
-            rockData.ResetRock();//resets each rock
-        }
-        foreach(GameObject tree in trees){//grabs each tree in game world
-            TreeBehavior treeData = tree.GetComponent<TreeBehavior>();//get tree data
-            treeData.ResetTree();//resets each tree
+            FarmData.isWatered[i] = false;
+            //plantData.UpdateSprite(currentStage[i]);
         }
     }
 }

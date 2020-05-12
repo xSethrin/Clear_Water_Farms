@@ -126,8 +126,8 @@ MonoBehaviour:
   stage2: {fileID: 21300000, guid: 67fdc74b8929ba94c8a0a66c9a40b756, type: 3}
   stage2W: {fileID: 21300000, guid: 0adb466248fce474ebcd3570b5f8474a, type: 3}
   stage3: {fileID: 21300000, guid: 46d401372f4bedf4d9bd0e61b46012db, type: 3}
+  harvest: {fileID: 21300000, guid: 88fde16f4542c4144b0471a8c7b24ec5, type: 3}
   timesWatered: 0
-  count: 0
   currentStage: 0
   isWatered: 0
   isTilled: 0

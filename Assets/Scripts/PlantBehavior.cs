@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlantBehavior : MonoBehaviour{
 
-    public Sprite untilled, tilled, stage1, stage1W, stage2, stage2W, stage3;//each of these is used to update the sprite
+    public Sprite untilled, tilled, stage1, stage1W, stage2, stage2W, stage3, harvest;//each of these is used to update the sprite
     public int timesWatered = 0, currentStage = 0;//timesWatered is used to detemer how many times the plant was watered.  this value will be used to check plants stage as well.
     public bool isWatered = false, isTilled = false, hasPlant = false;//isWatered checks if the plant was watered.  This will be used when player goes to sleep to properly update plant
     
@@ -18,27 +18,29 @@ public class PlantBehavior : MonoBehaviour{
             //Debug.Log("Field was tilled!");
             GetComponent<SpriteRenderer>().sprite = tilled;//update sprite
             isTilled = true;//set isTilled to true
+            JackObject.stam = JackObject.stam - (5 - JackObject.hoe);//decreases stamina by 5 - tool level
         }
         //TODO switch to seeds being held
-        else if(JackObject.currentTool == "hand" && isTilled && !(hasPlant)){//if current tool is seeds, land is tilled, and does not have a plant
+        else if(JackObject.currentTool == "seeds" && isTilled && !(hasPlant) && JackObject.seeds < 0){//if current tool is seeds, land is tilled, and does not have a plant
             //Debug.Log("Seed planted! at stage 1");
             GetComponent<SpriteRenderer>().sprite = stage1;//update sprite to stage 1
             currentStage = 1;//set current sage to 1
             hasPlant = true;//set hasPlant to true
+            JackObject.seeds--;
         }
-        else if (JackObject.currentTool == "water" && !(isWatered) && hasPlant){//if current tool is water, and tile is unwattered, and tile has plant
+        else if (JackObject.currentTool == "water" && !(isWatered) && hasPlant && JackObject.waterAmount < 0){//if current tool is water, and tile is unwattered, and tile has plant
             if(currentStage == 1){//if current stage is stage 1
                 //Debug.Log("Stage 1 watered");
                 GetComponent<SpriteRenderer>().sprite = stage1W;//update sprite
-                timesWatered++;//increment times watered
-                isWatered = true;//set is watered to true
             }
             else if(currentStage == 2){//if plat is ate stage 2
                 //Debug.Log("Stage 2 watered");
-                GetComponent<SpriteRenderer>().sprite = stage2W;//update sprite
-                timesWatered++;//increment times wattered
-                isWatered = true;//set is watered to true
+                GetComponent<SpriteRenderer>().sprite = stage2W;//update sprite     
             }
+            timesWatered++;//increment times wattered
+            isWatered = true;//set is watered to true
+            JackObject.waterAmount--;//decrease water in watering can
+            JackObject.stam = JackObject.stam - (5 - JackObject.water);//decrease stam by 5- tool level
         }
         else if(JackObject.currentTool == "hand" && currentStage == 3){//if plant is ready to be picked and jacks hands are empty
             //Debug.Log("picking plant");
@@ -56,6 +58,7 @@ public class PlantBehavior : MonoBehaviour{
             isWatered = false;//set isWatered to false
             currentStage = 0;//set current stage to 0
             timesWatered = 0;//set times watered to 0
+            JackObject.stam = JackObject.stam - (5 - JackObject.hammer);
         }
          else if(JackObject.currentTool == "sickle" && hasPlant){//if there is a plant and the sickle is the current tool
             //Debug.Log("cutting down plant");
@@ -64,6 +67,8 @@ public class PlantBehavior : MonoBehaviour{
             timesWatered = 0;//restes times watered
             isWatered = false;//set times watered to 0
             hasPlant = false;//set hasPlant to false
+            JackObject.stam = JackObject.stam - (5 - JackObject.sickle);
+
         }
     }
 
