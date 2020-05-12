@@ -8,27 +8,17 @@ public class TestStatics : MonoBehaviour
     void OnMouseDown(){
         JackObject.stam-=5;
         Debug.Log("Stam: " + JackObject.stam);
-        /**
-        Debug.Log("Test object clicked");
-        if(FarmData.chickenData != null){
-            Debug.Log("Chicken Objects: " + FarmData.chickenData.Length);
+        for(int i = 0; i < 10; i++){
+            bool temp = FarmData.hasChicken[i];
+            if(temp){
+                Debug.Log("Here is a true in FarmData.hasChicken");
+            }
+            else{
+                Debug.Log("Here is a false in FarmData.hasChicken");
+            }
         }
-        else{
-            Debug.Log("Chicken Objects is null");
-        }
-        if(FarmData.plantData != null){
-            Debug.Log("Plant Objects: " + FarmData.plantData.Length);
-        }
-        else{
-            Debug.Log("Plant Objects is null ");
-        }
-        if(FarmData.cowData != null){
-            Debug.Log("Cow Objects: " + FarmData.cowData.Length);
-        }
-        else{
-            Debug.Log("Cow Objects is null ");
-        }
-        */
+        
+        
         
     }
 }

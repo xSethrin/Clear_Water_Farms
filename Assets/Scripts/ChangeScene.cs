@@ -14,12 +14,18 @@ public class ChangeScene : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {   
+            sceneController.LoadScene(toScene);//loading new scene
+
             //setting local game object data to static farm data
             GameObject [] plants = GameObject.FindGameObjectsWithTag("Plant");//finds all the plants
             GameObject [] cows = GameObject.FindGameObjectsWithTag("Cow");//finds all the cows
             GameObject [] chickens = GameObject.FindGameObjectsWithTag("Chicken");//finds all the chickens
+            Debug.Log("Number of Chickens in scene: " + chickens.Length);
+            Debug.Log("Number of Cows in scene: " + cows.Length);
+            Debug.Log("Number of Plants in scene: " + plants.Length);
+
             if(plants.Length > 0){
-                Debug.Log("saving local data for plants...");
+                Debug.Log("updating local data for plants...");
                 int i = 0;//restes i for plants
                 foreach(GameObject plant in plants){
                     PlantBehavior plantData = plant.GetComponent<PlantBehavior>();
@@ -28,18 +34,33 @@ public class ChangeScene : MonoBehaviour
                     plantData.isWatered = FarmData.isWatered[i];
                     plantData.isTilled = FarmData.isTilled[i];
                     plantData.hasPlant = FarmData.hasPlant[i];
+                    i++;
                 }
             }
             if(cows.Length > 0){
-                Debug.Log("saving local data for plants...");
-                FarmData.cowData = cows;
+                Debug.Log("updating local data for cows...");
+                int i= 0;
+                foreach(GameObject cow in cows){
+                    CowBehavior cowData = cow.GetComponent<CowBehavior>();
+                    cowData.hasCow = FarmData.hasCow[i]; 
+                    cowData.wasFed = FarmData.cowWasFed[i];
+                    cowData.hasMilk = FarmData.hasMilk[i];
+                    i++;
+                }
             }
             if(chickens.Length > 0){
-                Debug.Log("saving local data for plants...");
-                FarmData.chickenData = chickens;
+                Debug.Log("updating local data for chickens...");
+                int i = 0;
+                foreach(GameObject chicken in chickens){
+                    ChickenBehavior chickenData = chicken.GetComponent<ChickenBehavior>();
+                    chickenData.hasChicken = FarmData.hasChicken[i]; 
+                    chickenData.wasFed = FarmData.chickenWasFed[i];
+                    chickenData.hasEgg = FarmData.hasEgg[i];
+                    i++;
+                }
             }
 
-            sceneController.LoadScene(toScene);//loading new scene
+            //sceneController.LoadScene(toScene);//loading new scene
         }
         
     }

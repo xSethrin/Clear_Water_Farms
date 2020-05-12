@@ -16,6 +16,7 @@ public class Title_Load_ChangeScene : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            
             sceneController.LoadScene(toScene);//loading new scene
         }
     }
