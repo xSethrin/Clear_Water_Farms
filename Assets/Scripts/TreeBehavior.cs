@@ -2,32 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+* This class defines behavior for rock objects
+*
+*/
 public class TreeBehavior : MonoBehaviour{
 
     public Sprite tree, noTree;
     public int timesHit = 0; 
     public bool notChopped = true, isBig;
 
-
+    /**
+    * This method acts as hitting the tree with your axe
+    *
+    */
     void OnMouseDown(){
-        //GameObject [] players = GameObject.FindGameObjectsWithTag("Player");//finds the player object
-        //JackObject jack = players[0].GetComponent<JackObject>();//gets player data
-        if(JackObject.currentTool == "axe"  && notChopped){
-            if(isBig){
+        if(JackObject.currentTool == "axe"  && notChopped){//checks if the axe is the current tool 
+            if(isBig){//checks if the tree is big
                 if(timesHit >= 5){
                     GetComponent<SpriteRenderer>().sprite = noTree;
-                    JackObject.lumber+= 3;
-                    notChopped = false;
+                    JackObject.lumber+= 3;//adds to lumber
+                    notChopped = false;//set notchopped to false
+                    JackObject.stam = JackObject.stam - (5 - JackObject.axe);
                 }
                 else{
-                    timesHit++;
+                    timesHit++;//increase times hit
                 }
             }
-            else{
+            else{//checks if tree is hit
                 if(timesHit >= 3){
                     GetComponent<SpriteRenderer>().sprite = noTree;
                     JackObject.lumber+= 1;
                     notChopped = false;
+                    JackObject.stam = JackObject.stam - (5 - JackObject.axe);
+
                 }
                 else{
                     timesHit++;
@@ -37,6 +45,7 @@ public class TreeBehavior : MonoBehaviour{
         }
     }
     
+    //no longer need?
     public void ResetTree(){
         notChopped = true;
         GetComponent<SpriteRenderer>().sprite = tree;

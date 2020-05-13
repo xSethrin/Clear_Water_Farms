@@ -16,9 +16,10 @@ public class ChickenBehavior : MonoBehaviour{
     */
     void OnMouseDown(){
         if(hasChicken){//cklicking on the game object does nothing unl
-            if(!(wasFed) && JackObject.currentTool == "water"){//this makes sure the chicken has not been fed yet and that the player has the correct item
+            if(!(wasFed) && JackObject.currentTool == "fodder" && JackObject.fodder > 0){//this makes sure the chicken has not been fed yet and that the player has the correct item
                 wasFed = true;
                 GetComponent<SpriteRenderer>().sprite = fed;//updates sprite
+                JackObject.fodder--;
             }
             if(hasEgg && JackObject.currentTool == "hand"){//this checks if the chicken laid an egg and gives one tp the player if true
                 //Adding to inventory
@@ -31,7 +32,7 @@ public class ChickenBehavior : MonoBehaviour{
                     }
                 }
                 if(flag) {//if no egg objecy is in inventory
-                    JackObject.slots.Add(new Produce("egg", 100, 1, egg));
+                    JackObject.slots.Add(new Produce("egg", 80, 1, egg));
                 }
                 Debug.Log("Got Egg!");
                 hasEgg = false;
@@ -45,8 +46,11 @@ public class ChickenBehavior : MonoBehaviour{
     *
     */
     public void UpdateSprite(){
-        if(hasChicken){//updates sprite if there is a chicken
+        if(hasChicken && !(wasFed)){//updates sprite if there is a chicken
             GetComponent<SpriteRenderer>().sprite = notFed;
+        }
+        else if(hasChicken && wasFed){
+            GetComponent<SpriteRenderer>().sprite = fed;
         }
         else{//updates sprite if there is no chicken
             GetComponent<SpriteRenderer>().sprite = noChicken;

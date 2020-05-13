@@ -31,7 +31,7 @@ public class CowBehavior : MonoBehaviour{
                     }
                 }
                 if (flag) {
-                    JackObject.slots.Add(new Produce("milk", 100, 1, milk));
+                    JackObject.slots.Add(new Produce("milk", 150, 1, milk));
                 }
                 Debug.Log("Got Milk!");
                 hasMilk = false;
@@ -44,8 +44,11 @@ public class CowBehavior : MonoBehaviour{
     * It is used by other classes
     */
     public void UpdateSprite(){
-        if(hasCow){//updates if has cow
+        if(hasCow && !(wasFed)){//updates if has cow
             GetComponent<SpriteRenderer>().sprite = cowNotFed;
+        }
+        else if(hasCow && wasFed){
+            GetComponent<SpriteRenderer>().sprite = cowFed;
         }
         else{//update if there is no cow
             GetComponent<SpriteRenderer>().sprite = noCow;

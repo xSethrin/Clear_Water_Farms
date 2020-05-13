@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Title_Load_ChangeScene : MonoBehaviour
 {
+    /*
     [SerializeField] private string toScene = null;
 
     private SceneController sceneController;
@@ -12,14 +13,14 @@ public class Title_Load_ChangeScene : MonoBehaviour
         sceneController = GameObject.FindGameObjectWithTag("GameController").GetComponent<SceneController>();
     }
     //Nikolo you will have to put your code inside of update above the sceneController line. This 
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
+    //void Update()
+    //{
+       // if (Input.GetMouseButtonDown(0))
+        //{
             
             sceneController.LoadScene(toScene);//loading new scene
-        }
-    }
+       // }
+    //}
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -29,5 +30,6 @@ public class Title_Load_ChangeScene : MonoBehaviour
         }
 
     }
+    */
 }
 

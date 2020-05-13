@@ -44,6 +44,17 @@ public class PlantBehavior : MonoBehaviour{
         }
         else if(JackObject.currentTool == "hand" && currentStage == 3){//if plant is ready to be picked and jacks hands are empty
             //Debug.Log("picking plant");
+            bool flag = true;
+                for (int i = 0; i < JackObject.slots.Count; i++) {//checks if egg object is already in inventory
+                    if(JackObject.slots[i].nameOf == "tomato") {
+                        flag = false;
+                        JackObject.slots[i].quantity++;
+                        break;
+                    }
+                }
+                if(flag) {//if no egg objecy is in inventory
+                    JackObject.slots.Add(new Produce("tomato", 70, 1, harvest));
+                }
             GetComponent<SpriteRenderer>().sprite = tilled;//update sprite
             hasPlant = false;//set hasplant to false
             isWatered = false;// set is watered to false
@@ -76,15 +87,35 @@ public class PlantBehavior : MonoBehaviour{
     * This method is used to update the sprite each day.  
     *
     */
-    public void UpdateSprite(int plantStage){
-        if(plantStage == 1){//if the stage is at stage 1
-            GetComponent<SpriteRenderer>().sprite = stage1;//update sprite
+    public void UpdateSprite(){
+        if(isTilled){
+            if(hasPlant){
+                if(currentStage == 1){//if the stage is at stage 1
+                    if(isWatered){
+                        GetComponent<SpriteRenderer>().sprite = stage1W;//update sprite
+                }
+                    else{
+                        GetComponent<SpriteRenderer>().sprite = stage1;//update sprite
+                    }  
+                }
+                else if(currentStage == 2){//if the stage is at stage 2
+                    if(isWatered){
+                        GetComponent<SpriteRenderer>().sprite = stage2W;//update sprite
+                    }
+                    else{
+                        GetComponent<SpriteRenderer>().sprite = stage2;//update sprite
+                    }
+                }
+                else if (currentStage == 3){//if the stage is at stage 3
+                    GetComponent<SpriteRenderer>().sprite = stage3;//update sprite
+                }
+            }
+            else{
+                GetComponent<SpriteRenderer>().sprite = tilled;//update sprite
+            }
         }
-        else if(plantStage == 2){//if the stage is at stage 2
-            GetComponent<SpriteRenderer>().sprite = stage2;//update sprite
-        }
-        else if (plantStage == 3){//if the stage is at stage 3
-            GetComponent<SpriteRenderer>().sprite = stage3;//update sprite
+        else{
+            GetComponent<SpriteRenderer>().sprite = untilled;//update sprite
         }
     }
     

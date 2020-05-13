@@ -23,7 +23,7 @@ public HealthBar healthBar;
     animator.SetFloat("Horizontal", movement.x);
     animator.SetFloat("Vertical", movement.y);
     animator.SetFloat("Magnitude", movement.magnitude);
-    transform.position = transform.position + movement * Time.deltaTime * 4;
+    transform.position = transform.position + movement * Time.deltaTime * 6;
     if(Input.GetKey("1")){
         JackObject.currentTool = "hand";
         //Inventory.GetComponent<Image>().color = selected;

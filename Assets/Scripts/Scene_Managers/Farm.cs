@@ -42,6 +42,7 @@ public class Farm : SceneController
             data.isWatered = FarmData.isWatered[i];
             data.isTilled = FarmData.isTilled[i];
             data.hasPlant = FarmData.hasPlant[i];
+            data.UpdateSprite();
             i++;
         }
     }
