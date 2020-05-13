@@ -15,14 +15,14 @@ public class ChangeScene : MonoBehaviour
         if (collision.CompareTag("Player"))
         {   
             sceneController.LoadScene(toScene);//loading new scene
-
+            Debug.Log("In change scene!!!!");
             //setting local game object data to static farm data
             GameObject [] plants = GameObject.FindGameObjectsWithTag("Plant");//finds all the plants
             GameObject [] cows = GameObject.FindGameObjectsWithTag("Cow");//finds all the cows
             GameObject [] chickens = GameObject.FindGameObjectsWithTag("Chicken");//finds all the chickens
-            Debug.Log("Number of Chickens in scene: " + chickens.Length);
-            Debug.Log("Number of Cows in scene: " + cows.Length);
-            Debug.Log("Number of Plants in scene: " + plants.Length);
+            //Debug.Log("Number of Chickens in scene: " + chickens.Length);
+            //Debug.Log("Number of Cows in scene: " + cows.Length);
+            //Debug.Log("Number of Plants in scene: " + plants.Length);
 
             if(plants.Length > 0){
                 Debug.Log("updating local data for plants...");
