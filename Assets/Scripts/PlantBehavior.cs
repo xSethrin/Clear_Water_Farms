@@ -19,6 +19,7 @@ public class PlantBehavior : MonoBehaviour{
             GetComponent<SpriteRenderer>().sprite = tilled;//update sprite
             isTilled = true;//set isTilled to true
             JackObject.stam = JackObject.stam - (5 - JackObject.hoe);//decreases stamina by 5 - tool level
+            //call that method();
         }
         //TODO switch to seeds being held
         else if(JackObject.currentTool == "seeds" && isTilled && !(hasPlant) && JackObject.seeds < 0){//if current tool is seeds, land is tilled, and does not have a plant

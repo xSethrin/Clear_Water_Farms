@@ -25,7 +25,7 @@ public class GameData {
     * it requires GameObject player, GameObject [] cows, GameObject [] chickens and GameObject [] plants
     * each objected will be parsed and data from these objects that needs to be saved will be stored
     */
-    public GameData(GameObject [] cows, GameObject [] chickens, GameObject [] plants){
+    public GameData(){
         //JackObject jack = player.GetComponent<JackObject>();//grabs the players data
         //these lines set the players data to the array         
         playerData[0] = JackObject.gold;
@@ -36,55 +36,55 @@ public class GameData {
         playerData[5] = JackObject.axe;
         playerData[6] = JackObject.lumber;
         playerData[7] = JackObject.ore;
-        hasCow = new int [cows.Length];//instantiates hasCow array 
-        hasMilk = new int [cows.Length];//instantiate hasMilk array
-        for(int i = 0; i < cows.Length; i++){//loops through the cows
-            CowBehavior cow = cows[i].GetComponent<CowBehavior>();//grabs cow data
-            if(cow.hasCow){//checks if has cow
+        hasCow = new int [10];//instantiates hasCow array 
+        hasMilk = new int [10];//instantiate hasMilk array
+        for(int i = 0; i < 10; i++){//loops through the cows
+            //CowBehavior cow = cows[i].GetComponent<CowBehavior>();//grabs cow data
+            if(FarmData.hasCow[i]){//checks if has cow
                 hasCow[i] = 1;
             }
             else{
                 hasCow[i] = 0;
             }
-            if(cow.hasMilk){//check if has milk
+            if(FarmData.hasMilk[i]){//check if has milk
                 hasMilk[i] = 1;
             }
             else{
                 hasMilk[i] = 0;
             }
         }
-        hasChicken = new int [chickens.Length];//instantiate hasChicken array
-        hasEgg = new int [chickens.Length];//instantiate hasEgg array
-        for(int i = 0; i < chickens.Length; i++){//this loops through the chickens
-             ChickenBehavior chicken = chickens[i].GetComponent<ChickenBehavior>();//grabs chicken data
-             if(chicken.hasChicken){//checks if has chicken
+        hasChicken = new int [10];//instantiate hasChicken array
+        hasEgg = new int [10];//instantiate hasEgg array
+        for(int i = 0; i < 10; i++){//this loops through the chickens
+             //ChickenBehavior chicken = chickens[i].GetComponent<ChickenBehavior>();//grabs chicken data
+             if(FarmData.hasChicken[i]){//checks if has chicken
                  hasChicken[i] = 1;
              }
              else{
                  hasChicken[i] = 0;
              }
-             if(chicken.hasEgg){//checks if has egg
+             if(FarmData.hasEgg[i]){//checks if has egg
                  hasEgg[i] = 1;
              }
              else{
                  hasEgg[i] = 0;
              }
         }
-        currentStage = new int [plants.Length];//instantiate currentStage array
-        timesWatered = new int [plants.Length];//instantiate timesWatered array
-        isTilled = new int [plants.Length];//instantiate isTilled array
-        hasPlant = new int [plants.Length];//instantiate hasPlant array
-        for(int i = 0; i < plants.Length; i++){//loops through plant arrays
-            PlantBehavior plant = plants[i].GetComponent<PlantBehavior>();//grabs plant data
-            currentStage[i] = plant.currentStage;//sets current stage for plant
-            timesWatered[i] = plant.timesWatered;//sets times watered for plant
-            if(plant.isTilled){//sets value for tilled
+        currentStage = new int [255];//instantiate currentStage array
+        timesWatered = new int [255];//instantiate timesWatered array
+        isTilled = new int [255];//instantiate isTilled array
+        hasPlant = new int [255];//instantiate hasPlant array
+        for(int i = 0; i < 255; i++){//loops through plant arrays
+            //PlantBehavior plant = plants[i].GetComponent<PlantBehavior>();//grabs plant data
+            currentStage[i] = FarmData.currentStage[i];//sets current stage for plant
+            timesWatered[i] = FarmData.timesWatered[i];//sets times watered for plant
+            if(FarmData.isTilled[i]){//sets value for tilled
                 isTilled[i] = 1;
             }
             else{
                 isTilled[i] = 0;
             }
-            if(plant.hasPlant){//sets value for hasplant
+            if(FarmData.hasPlant[i]){//sets value for hasplant
                 hasPlant[i] = 1;
             }
             else{
