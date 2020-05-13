@@ -21,19 +21,12 @@ public class Farm_Barn_Interrior : SceneController
         int i = 0;
         foreach(GameObject cow in cows){
             CowBehavior data = cow.GetComponent<CowBehavior>();
-            if(FarmData.cowData == null){
-                data.hasCow = false;
-                data.wasFed = false;
-                data.hasMilk = false;
-            } 
-            else{
-                data.hasCow = FarmData.cowData[i].GetComponent<CowBehavior>().hasCow;
-                data.wasFed = FarmData.cowData[i].GetComponent<CowBehavior>().wasFed;
-                data.hasMilk = FarmData.cowData[i].GetComponent<CowBehavior>().hasMilk;
-            }
-            i++;
+            data.hasCow = FarmData.hasCow[i];
+            data.wasFed = FarmData.cowWasFed[i];
+            data.hasMilk = FarmData.hasMilk[i];
+            data.UpdateSprite();
+            i++;            
         }
     }
-
 }
 

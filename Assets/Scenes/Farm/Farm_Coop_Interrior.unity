@@ -2163,7 +2163,7 @@ PrefabInstance:
     - target: {fileID: 9043830739524071051, guid: 8ae9b38b89c6f234cbcf1b175601ee0d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9043830739524071051, guid: 8ae9b38b89c6f234cbcf1b175601ee0d,
         type: 3}
@@ -3393,7 +3393,7 @@ PrefabInstance:
     - target: {fileID: 9043830739524071051, guid: 8ae9b38b89c6f234cbcf1b175601ee0d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 9043830739524071051, guid: 8ae9b38b89c6f234cbcf1b175601ee0d,
         type: 3}
@@ -3472,7 +3472,7 @@ PrefabInstance:
     - target: {fileID: 9043830739524071051, guid: 8ae9b38b89c6f234cbcf1b175601ee0d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9043830739524071051, guid: 8ae9b38b89c6f234cbcf1b175601ee0d,
         type: 3}
@@ -3620,7 +3620,7 @@ PrefabInstance:
     - target: {fileID: 9043830739524071051, guid: 8ae9b38b89c6f234cbcf1b175601ee0d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9043830739524071051, guid: 8ae9b38b89c6f234cbcf1b175601ee0d,
         type: 3}
@@ -3731,7 +3731,7 @@ PrefabInstance:
     - target: {fileID: 9043830739524071051, guid: 8ae9b38b89c6f234cbcf1b175601ee0d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9043830739524071051, guid: 8ae9b38b89c6f234cbcf1b175601ee0d,
         type: 3}
@@ -3907,10 +3907,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1336355991}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d6064be859933a438985a25d3e94c21, type: 3}
+  m_Script: {fileID: 11500000, guid: 644e2fae65b72dc48b70d3283c670569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 2
+  toScene: Farm
 --- !u!61 &1336355994
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4309,6 +4309,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: chicken_object (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 114050901401274874, guid: 8ae9b38b89c6f234cbcf1b175601ee0d,
+        type: 3}
+      propertyPath: notFed
+      value: 
+      objectReference: {fileID: 21300000, guid: 488880280d05f8b458987dcc1d6cf29b,
+        type: 3}
+    - target: {fileID: 114050901401274874, guid: 8ae9b38b89c6f234cbcf1b175601ee0d,
+        type: 3}
+      propertyPath: fed
+      value: 
+      objectReference: {fileID: 21300000, guid: cccdb63ea98d5e948b0be128ad7b137d,
+        type: 3}
     - target: {fileID: 5933892814238634938, guid: 8ae9b38b89c6f234cbcf1b175601ee0d,
         type: 3}
       propertyPath: m_SortingOrder

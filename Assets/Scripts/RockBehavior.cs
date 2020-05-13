@@ -8,14 +8,13 @@ public class RockBehavior : MonoBehaviour{
     public int timesHit = 0; 
     public bool isBig, notBroken = true;
 
-    void OnMouseDown(){
-        //GameObject [] players = GameObject.FindGameObjectsWithTag("Player");//finds the player object
-        //JackObject jack = players[0].GetComponent<JackObject>();//gets player data        
+    void OnMouseDown(){     
         if(JackObject.currentTool == "hammer" && notBroken){
             if(isBig){
                 if(timesHit >= 5){
                     GetComponent<SpriteRenderer>().sprite = noRock;
                     JackObject.ore+= 3;
+                    JackObject.stam = JackObject.stam - (5 - JackObject.hammer);
                     notBroken = false;
                 }
                 else{
@@ -26,6 +25,7 @@ public class RockBehavior : MonoBehaviour{
                 if(timesHit >= 3){
                     GetComponent<SpriteRenderer>().sprite = noRock;
                     JackObject.ore+= 1;
+                    JackObject.stam = JackObject.stam - (5 - JackObject.hammer);
                     notBroken = false;
                 }
                 else{ 
@@ -35,6 +35,7 @@ public class RockBehavior : MonoBehaviour{
         }
     }
 
+    //not needed?
     public void ResetRock(){
         notBroken = true;
         GetComponent<SpriteRenderer>().sprite = rock;
