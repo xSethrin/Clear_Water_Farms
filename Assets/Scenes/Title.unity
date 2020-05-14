@@ -575,7 +575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7cacf558ea9ee449b6b29e9dfac063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toScene: 
+  toScene: Farm_House_Interrior
 --- !u!1 &1855226040
 GameObject:
   m_ObjectHideFlags: 0
