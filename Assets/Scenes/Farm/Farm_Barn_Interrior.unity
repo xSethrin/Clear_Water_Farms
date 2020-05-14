@@ -347,6 +347,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: cow_object (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4248233703820976397, guid: a28df238f98d79d4093dfb45047b6632,
+        type: 3}
+      propertyPath: cowFed
+      value: 
+      objectReference: {fileID: 21300000, guid: 1691d261c68c64a4abbd07fb478b1dff,
+        type: 3}
+    - target: {fileID: 4248233703820976397, guid: a28df238f98d79d4093dfb45047b6632,
+        type: 3}
+      propertyPath: cowNotFed
+      value: 
+      objectReference: {fileID: 21300000, guid: 4a8794cef12b28743abc8e14abf16314,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a28df238f98d79d4093dfb45047b6632, type: 3}
 --- !u!1001 &410032516
@@ -523,6 +535,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: cow_object
       objectReference: {fileID: 0}
+    - target: {fileID: 4248233703820976397, guid: a28df238f98d79d4093dfb45047b6632,
+        type: 3}
+      propertyPath: cowNotFed
+      value: 
+      objectReference: {fileID: 21300000, guid: da391e05c0c2f654d973c80cba610d07,
+        type: 3}
+    - target: {fileID: 4248233703820976397, guid: a28df238f98d79d4093dfb45047b6632,
+        type: 3}
+      propertyPath: cowFed
+      value: 
+      objectReference: {fileID: 21300000, guid: 24d777e02b8020646988725ec35a7376,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a28df238f98d79d4093dfb45047b6632, type: 3}
 --- !u!1 &512973815
@@ -936,6 +960,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: cow_object (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4248233703820976397, guid: a28df238f98d79d4093dfb45047b6632,
+        type: 3}
+      propertyPath: cowFed
+      value: 
+      objectReference: {fileID: 21300000, guid: fa5190ca4ed313b4dac1cbfecea0459c,
+        type: 3}
+    - target: {fileID: 4248233703820976397, guid: a28df238f98d79d4093dfb45047b6632,
+        type: 3}
+      propertyPath: cowNotFed
+      value: 
+      objectReference: {fileID: 21300000, guid: b547a382da92d9a46938cab05b41e20f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a28df238f98d79d4093dfb45047b6632, type: 3}
 --- !u!1 &774318753
@@ -2328,6 +2364,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: cow_object (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4248233703820976397, guid: a28df238f98d79d4093dfb45047b6632,
+        type: 3}
+      propertyPath: cowNotFed
+      value: 
+      objectReference: {fileID: 21300000, guid: eb5d87a2a9bd3ed4bb336c02663f08e6,
+        type: 3}
+    - target: {fileID: 4248233703820976397, guid: a28df238f98d79d4093dfb45047b6632,
+        type: 3}
+      propertyPath: noCow
+      value: 
+      objectReference: {fileID: 21300000, guid: bfda68554bce44f45a5f6d051784eeef,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a28df238f98d79d4093dfb45047b6632, type: 3}
 --- !u!1 &1160219517 stripped
@@ -2562,6 +2610,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: cow_object (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4248233703820976397, guid: a28df238f98d79d4093dfb45047b6632,
+        type: 3}
+      propertyPath: cowNotFed
+      value: 
+      objectReference: {fileID: 21300000, guid: 4a8794cef12b28743abc8e14abf16314,
+        type: 3}
+    - target: {fileID: 4248233703820976397, guid: a28df238f98d79d4093dfb45047b6632,
+        type: 3}
+      propertyPath: cowFed
+      value: 
+      objectReference: {fileID: 21300000, guid: 1691d261c68c64a4abbd07fb478b1dff,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a28df238f98d79d4093dfb45047b6632, type: 3}
 --- !u!1001 &1733117431
@@ -2636,6 +2696,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: cow_object (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4248233703820976397, guid: a28df238f98d79d4093dfb45047b6632,
+        type: 3}
+      propertyPath: cowFed
+      value: 
+      objectReference: {fileID: 21300000, guid: bfda68554bce44f45a5f6d051784eeef,
+        type: 3}
+    - target: {fileID: 4248233703820976397, guid: a28df238f98d79d4093dfb45047b6632,
+        type: 3}
+      propertyPath: cowNotFed
+      value: 
+      objectReference: {fileID: 21300000, guid: eb5d87a2a9bd3ed4bb336c02663f08e6,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a28df238f98d79d4093dfb45047b6632, type: 3}
 --- !u!1 &1752322363 stripped
@@ -3899,6 +3971,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: cow_object (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4248233703820976397, guid: a28df238f98d79d4093dfb45047b6632,
+        type: 3}
+      propertyPath: cowFed
+      value: 
+      objectReference: {fileID: 21300000, guid: fa5190ca4ed313b4dac1cbfecea0459c,
+        type: 3}
+    - target: {fileID: 4248233703820976397, guid: a28df238f98d79d4093dfb45047b6632,
+        type: 3}
+      propertyPath: cowNotFed
+      value: 
+      objectReference: {fileID: 21300000, guid: b547a382da92d9a46938cab05b41e20f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a28df238f98d79d4093dfb45047b6632, type: 3}
 --- !u!1001 &2094583895
@@ -3973,6 +4057,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: cow_object (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4248233703820976397, guid: a28df238f98d79d4093dfb45047b6632,
+        type: 3}
+      propertyPath: cowFed
+      value: 
+      objectReference: {fileID: 21300000, guid: da391e05c0c2f654d973c80cba610d07,
+        type: 3}
+    - target: {fileID: 4248233703820976397, guid: a28df238f98d79d4093dfb45047b6632,
+        type: 3}
+      propertyPath: cowNotFed
+      value: 
+      objectReference: {fileID: 21300000, guid: 24d777e02b8020646988725ec35a7376,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a28df238f98d79d4093dfb45047b6632, type: 3}
 --- !u!1 &2116379431 stripped
