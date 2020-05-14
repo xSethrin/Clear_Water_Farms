@@ -286,8 +286,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235217465}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 217.87, y: 82.9, z: 0.285541}
-  m_LocalScale: {x: 63.62279, y: 36.854733, z: 1}
+  m_LocalPosition: {x: 137.66, y: 51.68, z: 0.285541}
+  m_LocalScale: {x: 66.1677, y: 37.223278, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -305,7 +305,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.037743896, y: 0.013018966}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -316,7 +316,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.26, y: 1.84}
+  m_Size: {x: 1.0033407, y: 1.2411277}
   m_EdgeRadius: 0
 --- !u!114 &1235217469
 MonoBehaviour:
@@ -383,7 +383,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 186.50159
+  orthographic size: 117.40199
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -407,7 +407,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1555970726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 328, y: 184, z: -10}
+  m_LocalPosition: {x: 209, y: 124, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -531,7 +531,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769983907}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 474.55, y: 83.2, z: 0.285541}
+  m_LocalPosition: {x: 298.8, y: 50.5, z: 0.285541}
   m_LocalScale: {x: 49.251663, y: 25.475344, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -550,7 +550,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04613319, y: -0.03377223}
+  m_Offset: {x: 0.022126883, y: 0.041565776}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -561,7 +561,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6493208, y: 2.6200485}
+  m_Size: {x: 1.1227419, y: 1.5653255}
   m_EdgeRadius: 0
 --- !u!114 &1769983911
 MonoBehaviour:
