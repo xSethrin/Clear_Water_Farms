@@ -47,7 +47,7 @@ public class PlantBehavior : MonoBehaviour{
             //Debug.Log("picking plant");
             bool flag = true;
                 for (int i = 0; i < JackObject.slots.Count; i++) {//checks if egg object is already in inventory
-                    if(JackObject.slots[i].nameOf == "tomato") {
+                    if(JackObject.slots[i].produceName == "tomato") {
                         flag = false;
                         JackObject.slots[i].quantity++;
                         break;

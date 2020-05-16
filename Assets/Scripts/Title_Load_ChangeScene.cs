@@ -20,6 +20,8 @@ public class Title_Load_ChangeScene : MonoBehaviour
         SaveSystem save = new SaveSystem();//creates a save object
         GameData data = save.LoadGame();//creates a game data object
         int [] playerData = data.playerData;//int array for Player data
+        string [] produceName = data.produceName;//string array for produce name
+        int [] produceQuantity = data.produceQuantity;//int array for produce quantity
         int [] hasCow = data.hasCow;//int array for cow bool
         int [] hasMilk = data.hasMilk;//int array for milk bool
         int [] hasChicken = data.hasChicken;//int array for chicken bool
@@ -29,10 +31,6 @@ public class Title_Load_ChangeScene : MonoBehaviour
         int [] isTilled = data.isTilled;
         int [] hasPlant = data.hasPlant;
         JackObject.stam = 100;//restes jacks stamina
-        //GameObject [] plants = GameObject.FindGameObjectsWithTag("Plant");//gets the plant objects
-        //GameObject [] cows = GameObject.FindGameObjectsWithTag("Cow");//gets the cow objects
-        //GameObject [] chickens = GameObject.FindGameObjectsWithTag("Chicken");//gets the chicken objects
-       // GameObject [] plants = GameObject.FindGameObjectsWithTag("Plant");//gets all plant objects
         //the following lines set all of jacks data back to what was saved
         JackObject.gold = playerData[0];
         JackObject.water = playerData[1];   
@@ -42,9 +40,21 @@ public class Title_Load_ChangeScene : MonoBehaviour
         JackObject.axe = playerData[5];
         JackObject.lumber = playerData[6];
         JackObject.ore = playerData[7];
-        //int i = 0;//variable for incrimenting through the cow, chicken, and plant objects
+        JackObject.seeds = playerData[8];
+        JackObject.fodder = playerData[9];
+        JackObject.waterAmount = playerData[10];
+        for(int i = 0; i < produceName.Length; i++){
+            if(produceName[i] == "milk"){
+                JackObject.slots.Add(new Produce("milk", 150, produceQuantity[i]));
+            }
+            else if(produceName[i] == "egg"){
+                JackObject.slots.Add(new Produce("egg", 80, produceQuantity[i]));
+            }
+            else if(produceName[i] == "tomato"){
+                JackObject.slots.Add(new Produce("tomato", 70, produceQuantity[i]));
+            }
+        }
         for(int i = 0; i < 10; i ++){//loop through each cow object
-            //CowBehavior cowData = cow.GetComponent<CowBehavior>();//grabs the cow behavior which holds cow data
             if(hasCow[i] == 1){//checks if has cow is true
                 FarmData.hasCow[i] = true;//sets to true
             }
@@ -58,12 +68,8 @@ public class Title_Load_ChangeScene : MonoBehaviour
                 FarmData.hasMilk[i] = false;//sets false
             }
             FarmData.cowWasFed[i] = false;//wasFed set is always set to false. THIS IS NEEDED TO PREVENT BUGS IF PLAYER LOADS GAME WHILE PLAYING WITHOUT SAVING 1ST
-            //cowData.UpdateSprite();//updates cow sprite
-            //i++;
         }
-        //i = 0;//resest i for chickens
         for(int i = 0; i < 10; i++){
-            //ChickenBehavior chickenData = chicken.GetComponent<ChickenBehavior>();//grab chicken behavior
             if(hasChicken[i] == 1){//check if has chicken is true
                 FarmData.hasChicken[i] = true;
             }
@@ -77,12 +83,8 @@ public class Title_Load_ChangeScene : MonoBehaviour
                 FarmData.hasEgg[i] = false;
             }
             FarmData.chickenWasFed[i] = false;//always set to false, needed to prevent bugs
-            //chickenData.UpdateSprite();//updates sprite
-            //i++;
         }
-        //i = 0;//restes i for plants
         for(int i = 0; i < 255; i++){
-            //PlantBehavior plantData = plant.GetComponent<PlantBehavior>();
             FarmData.currentStage[i] = currentStage[i];//sets current stage for plant
             FarmData.timesWatered[i] = timesWatered[i];//sets times watered for plant
             if(isTilled[i] == 1){//sets value for tilled
@@ -98,7 +100,6 @@ public class Title_Load_ChangeScene : MonoBehaviour
                 FarmData.hasPlant[i] = false;
             }
             FarmData.isWatered[i] = false;
-            //plantData.UpdateSprite(currentStage[i]);
         }
         sceneController.LoadScene(toScene);//loading new scene
     }

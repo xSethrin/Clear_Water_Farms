@@ -25,7 +25,7 @@ public class ChickenBehavior : MonoBehaviour{
                 //Adding to inventory
                 bool flag = true;
                 for (int i = 0; i < JackObject.slots.Count; i++) {//checks if egg object is already in inventory
-                    if(JackObject.slots[i].nameOf == "egg") {
+                    if(JackObject.slots[i].produceName == "egg") {
                         flag = false;
                         JackObject.slots[i].quantity++;
                         break;

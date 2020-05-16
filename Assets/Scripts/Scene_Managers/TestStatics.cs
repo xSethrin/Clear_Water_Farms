@@ -6,7 +6,10 @@ public class TestStatics : MonoBehaviour
 {
 
     void OnMouseDown(){
-        JackObject.stam-=5;
+        for(int i = 0; i < JackObject.slots.Count; i++){
+            Debug.Log(JackObject.slots[i].produceName);
+        }
+        /**
         Debug.Log("Stam: " + JackObject.stam);
         for(int i = 0; i < 10; i++){
             if(FarmData.hasChicken[i]){
@@ -46,6 +49,7 @@ public class TestStatics : MonoBehaviour
 
             }
         }
+        */
         
         
         

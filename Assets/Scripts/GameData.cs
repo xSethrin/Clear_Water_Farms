@@ -8,16 +8,17 @@ using UnityEngine;
 [System.Serializable]//this allows the object to be converted into a binary form and saved to a file
 public class GameData {
 
-    public int [] playerData = new int [8];//int array for Player data
-    //TODO add player inventory
+    public int [] playerData = new int [11];//int array for Player data
+    public string [] produceName;//save type of produce
+    public int [] produceQuantity;//to save quantity of produce
     public int [] hasCow;//int array for cow bool
     public int [] hasMilk;//int array for milk bool
     public int [] hasChicken;//int array for chicken bool
     public int [] hasEgg;//int array for egg bool
-    public int [] currentStage;
-    public int [] timesWatered;
-    public int [] isTilled;
-    public int [] hasPlant;
+    public int [] currentStage;//plant current satge
+    public int [] timesWatered;//times plant was watered
+    public int [] isTilled;//if it was tilled
+    public int [] hasPlant;//if it has a plant
 
     /** 
     * This is a constructor for the GameData object 
@@ -26,7 +27,6 @@ public class GameData {
     * each objected will be parsed and data from these objects that needs to be saved will be stored
     */
     public GameData(){
-        //JackObject jack = player.GetComponent<JackObject>();//grabs the players data
         //these lines set the players data to the array         
         playerData[0] = JackObject.gold;
         playerData[1] = JackObject.water;   
@@ -36,6 +36,15 @@ public class GameData {
         playerData[5] = JackObject.axe;
         playerData[6] = JackObject.lumber;
         playerData[7] = JackObject.ore;
+        playerData[8] = JackObject.seeds;
+        playerData[9] = JackObject.fodder;
+        playerData[10] = JackObject.waterAmount;
+        produceName = new string [JackObject.slots.Count];
+        produceQuantity = new int [JackObject.slots.Count];
+        for(int i = 0; i < JackObject.slots.Count; i++){
+            produceName[i] = JackObject.slots[i].produceName;
+            produceQuantity[i] = JackObject.slots[i].quantity;
+        }
         hasCow = new int [10];//instantiates hasCow array 
         hasMilk = new int [10];//instantiate hasMilk array
         for(int i = 0; i < 10; i++){//loops through the cows
@@ -97,8 +106,10 @@ public class GameData {
     * This constructor is used to load data
     *
     */
-    public GameData(int [] playerData, int [] hasCow, int [] hasMilk, int [] hasChicken,int [] hasEgg, int [] currentStage, int [] timesWatered, int [] isTilled, int [] hasPlant){
+    public GameData(int [] playerData, string [] produceName, int [] produceQuantity, int [] hasCow, int [] hasMilk, int [] hasChicken,int [] hasEgg, int [] currentStage, int [] timesWatered, int [] isTilled, int [] hasPlant){
         this.playerData = playerData;
+        this.produceName = produceName;
+        this.produceQuantity = produceQuantity;
         this.hasCow = hasCow;
         this.hasMilk = hasMilk;
         this.hasChicken = hasChicken;

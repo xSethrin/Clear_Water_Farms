@@ -24,7 +24,7 @@ public class CowBehavior : MonoBehaviour{
                 //Adding to inventory
                 bool flag = true;
                 for (int i = 0; i < JackObject.slots.Count; i++) {
-                    if (JackObject.slots[i].nameOf == "milk") {
+                    if (JackObject.slots[i].produceName == "milk") {
                         flag = false;
                         JackObject.slots[i].quantity++;
                         break;
