@@ -13,11 +13,10 @@ public class NewDayScript : MonoBehaviour{
     * It is ran when the player goes to sleep (clicks on the bed)
     */
     void OnMouseDown(){
-        JackObject.stam = 100;//resets stamina
+        JackObject.stam = 150;//resets stamina
         for(int i = 0; i < 255; i++){//loops through all the plants
             if(FarmData.timesWatered[i] == 3){//if plant was watered 3 times it is ready to grow to the next stage
                 FarmData.currentStage[i]++;
-                //plantData.UpdateSprite();//update sprite
                 FarmData.timesWatered[i] = 0;//resets times watered
             }
             FarmData.isWatered[i] = false;//sets is watered to false for each new day
@@ -40,7 +39,6 @@ public class NewDayScript : MonoBehaviour{
             }
            FarmData.chickenWasFed[i] = false;//resets was fed every day
         }
-        Debug.Log("Creating save file...");
         SaveSystem save = new SaveSystem();//creates a save object
         save.SaveGame(new GameData());//saves your game
     }

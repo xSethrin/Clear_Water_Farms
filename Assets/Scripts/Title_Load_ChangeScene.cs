@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+* This class runs the load function.
+* It takes the binary file and changes it back to primative data types
+* This data is then put back into their game objects
+*/
 public class Title_Load_ChangeScene : MonoBehaviour
 {
     [SerializeField] private string toScene = null;
@@ -30,7 +35,7 @@ public class Title_Load_ChangeScene : MonoBehaviour
         int [] timesWatered = data.timesWatered;
         int [] isTilled = data.isTilled;
         int [] hasPlant = data.hasPlant;
-        JackObject.stam = 100;//restes jacks stamina
+        JackObject.stam = 150;//restes jacks stamina
         //the following lines set all of jacks data back to what was saved
         JackObject.gold = playerData[0];
         JackObject.water = playerData[1];   
@@ -57,6 +62,7 @@ public class Title_Load_ChangeScene : MonoBehaviour
         for(int i = 0; i < 10; i ++){//loop through each cow object
             if(hasCow[i] == 1){//checks if has cow is true
                 FarmData.hasCow[i] = true;//sets to true
+                JackObject.cows++;
             }
             else{
                 FarmData.hasCow[i] = false;//set false
@@ -72,6 +78,7 @@ public class Title_Load_ChangeScene : MonoBehaviour
         for(int i = 0; i < 10; i++){
             if(hasChicken[i] == 1){//check if has chicken is true
                 FarmData.hasChicken[i] = true;
+                JackObject.chickens++;
             }
             else{
                 FarmData.hasChicken[i] = false;

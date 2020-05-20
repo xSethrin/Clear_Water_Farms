@@ -32,9 +32,8 @@ public class ChickenBehavior : MonoBehaviour{
                     }
                 }
                 if(flag) {//if no egg objecy is in inventory
-                    JackObject.slots.Add(new Produce("egg", 80, 1, egg));
+                    JackObject.slots.Add(new Produce("egg", 80, 1));
                 }
-                Debug.Log("Got Egg!");
                 hasEgg = false;
             }       
         }

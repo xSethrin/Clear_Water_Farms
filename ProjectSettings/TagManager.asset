@@ -10,6 +10,8 @@ TagManager:
   - Chicken
   - Rock
   - Tree
+  - slot
+  - Quantity
   layers:
   - Default
   - TransparentFX

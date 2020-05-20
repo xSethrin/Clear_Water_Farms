@@ -48,7 +48,6 @@ public class GameData {
         hasCow = new int [10];//instantiates hasCow array 
         hasMilk = new int [10];//instantiate hasMilk array
         for(int i = 0; i < 10; i++){//loops through the cows
-            //CowBehavior cow = cows[i].GetComponent<CowBehavior>();//grabs cow data
             if(FarmData.hasCow[i]){//checks if has cow
                 hasCow[i] = 1;
             }
@@ -65,7 +64,6 @@ public class GameData {
         hasChicken = new int [10];//instantiate hasChicken array
         hasEgg = new int [10];//instantiate hasEgg array
         for(int i = 0; i < 10; i++){//this loops through the chickens
-             //ChickenBehavior chicken = chickens[i].GetComponent<ChickenBehavior>();//grabs chicken data
              if(FarmData.hasChicken[i]){//checks if has chicken
                  hasChicken[i] = 1;
              }
@@ -84,7 +82,6 @@ public class GameData {
         isTilled = new int [255];//instantiate isTilled array
         hasPlant = new int [255];//instantiate hasPlant array
         for(int i = 0; i < 255; i++){//loops through plant arrays
-            //PlantBehavior plant = plants[i].GetComponent<PlantBehavior>();//grabs plant data
             currentStage[i] = FarmData.currentStage[i];//sets current stage for plant
             timesWatered[i] = FarmData.timesWatered[i];//sets times watered for plant
             if(FarmData.isTilled[i]){//sets value for tilled
