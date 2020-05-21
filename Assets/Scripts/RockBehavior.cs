@@ -16,6 +16,7 @@ public class RockBehavior : MonoBehaviour{
                     JackObject.ore+= 3;
                     JackObject.stam = JackObject.stam - (5 - JackObject.hammer);
                     notBroken = false;
+                    GetComponent<BoxCollider2D>().enabled = false;
                 }
                 else{
                     timesHit++;
@@ -23,7 +24,7 @@ public class RockBehavior : MonoBehaviour{
                 }
             }
             else{
-                if(timesHit >= 3){
+                if(timesHit >= 2){
                     GetComponent<SpriteRenderer>().sprite = noRock;
                     JackObject.ore+= 1;
                     JackObject.stam = JackObject.stam - (5 - JackObject.hammer);
