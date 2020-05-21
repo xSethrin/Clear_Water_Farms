@@ -43,12 +43,12 @@ public class NewDayScript : MonoBehaviour{
         }
         SaveSystem save = new SaveSystem();//creates a save object
         save.SaveGame(new GameData());//saves your game
-        animator.SetTrigger("FadeOut");
-        
+       // animator.SetTrigger("FadeOut");
+         SceneManager.LoadScene(sceneName);
 
     }
 
     public void  makeChange(){
-        SceneManager.LoadScene(sceneName);
+       
     } 
 }

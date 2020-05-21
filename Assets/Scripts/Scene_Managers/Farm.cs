@@ -14,7 +14,7 @@ public class Farm : SceneController
 
         if (prevScene == "Farm_House_Interrior")
         {
-            player.position = new Vector2(26.44f, -45f);
+            player.position = new Vector2(26.44f, -46f);
 
         }
         else if (prevScene == "Cross_Roads")
