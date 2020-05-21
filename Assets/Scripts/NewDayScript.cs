@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /**
 * This class updates data for the start of each day
 *
 */
 public class NewDayScript : MonoBehaviour{
-    
+    public Animator animator;
+    public string sceneName;
     /**
     * This method updates data for the start of each day
     * It is ran when the player goes to sleep (clicks on the bed)
@@ -41,8 +43,12 @@ public class NewDayScript : MonoBehaviour{
         }
         SaveSystem save = new SaveSystem();//creates a save object
         save.SaveGame(new GameData());//saves your game
-        
+        animator.SetTrigger("FadeOut");
         
 
     }
+
+    public void  makeChange(){
+        SceneManager.LoadScene(sceneName);
+    } 
 }

@@ -16,14 +16,13 @@ public class SceneController : MonoBehaviour
     }
 
     public void FadeToLevel(string level){
-
+        
     }
 
     public void LoadScene(string sceneName)
     {
-
+        //Debug.Log("loadingScene");
         prevScene = currentScene;
-        animator.SetTrigger("fade_Out");
         SceneManager.LoadScene(sceneName);
     }
 

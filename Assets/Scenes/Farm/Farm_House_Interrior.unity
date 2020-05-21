@@ -936,7 +936,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 621141549}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -1732,6 +1732,11 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 558265434}
+    - target: {fileID: 114924187463785722, guid: 4651ba3b0709eff41b4f4b9b3b54ba88,
+        type: 3}
+      propertyPath: sceneName
+      value: Farm_House_Interrior
+      objectReference: {fileID: 0}
     - target: {fileID: 3015583690230817991, guid: 4651ba3b0709eff41b4f4b9b3b54ba88,
         type: 3}
       propertyPath: m_SortingOrder
@@ -3523,7 +3528,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9f1d22f3d87435c47b2225f9db124634, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.533
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3537,7 +3542,7 @@ AudioSource:
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
