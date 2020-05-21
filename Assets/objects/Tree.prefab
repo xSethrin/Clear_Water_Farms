@@ -150,8 +150,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee44c6b3591ec0c468d782c490055f51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tree: {fileID: 21300000, guid: 1137a19691ef4d44395faae9ed4e7aa1, type: 3}
   noTree: {fileID: 0}
   timesHit: 0
@@ -215,5 +215,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62ca281e71a84f84aa9d92876cd7bb31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:

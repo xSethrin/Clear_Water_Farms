@@ -12,6 +12,7 @@ TagManager:
   - Tree
   - slot
   - Quantity
+  - music
   layers:
   - Default
   - TransparentFX
