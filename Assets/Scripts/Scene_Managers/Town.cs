@@ -14,7 +14,7 @@ public class Town : SceneController
 
         if (prevScene == "Cross_Roads")
         {
-            player.position = new Vector2(-21.23f, -.67f);
+            player.position = new Vector2(-1.176987f, 0.4883403f);
 
         }
         else if (prevScene == "Town")
