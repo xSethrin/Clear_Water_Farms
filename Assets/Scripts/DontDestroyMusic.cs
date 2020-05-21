@@ -5,9 +5,7 @@ using UnityEngine;
 public class DontDestroyMusic : MonoBehaviour
 {
    void Awake(){
-        GameObject [] music = GameObject.FindGameObjectsWithTag("music");
-        Debug.Log("music count: " + music.Length);
-        
+        GameObject [] music = GameObject.FindGameObjectsWithTag("music");        
         if(music.Length > 1){
             if(music.Length == 3){
                 Destroy(music[1]);

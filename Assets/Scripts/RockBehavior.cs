@@ -9,7 +9,7 @@ public class RockBehavior : MonoBehaviour{
     public bool isBig, notBroken = true;
 
     void OnMouseDown(){     
-        if(JackObject.currentTool == "hammer" && notBroken){
+        if(JackObject.currentTool == "hammer" && notBroken && JackObject.stam > 0){
             if(isBig){
                 if(timesHit >= 5){
                     GetComponent<SpriteRenderer>().sprite = noRock;
@@ -27,6 +27,7 @@ public class RockBehavior : MonoBehaviour{
                     JackObject.ore+= 1;
                     JackObject.stam = JackObject.stam - (5 - JackObject.hammer);
                     notBroken = false;
+                    GetComponent<BoxCollider2D>().enabled = false;
                 }
                 else{ 
                     timesHit++;

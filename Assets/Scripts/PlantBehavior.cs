@@ -14,18 +14,18 @@ public class PlantBehavior : MonoBehaviour{
     */
     void OnMouseDown(){
 
-        if(JackObject.currentTool == "hoe" && !(isTilled) && !(hasPlant)){//if land is untilled, does not have plant, and current tool is hoe
+        if(JackObject.currentTool == "hoe" && !(isTilled) && !(hasPlant) && JackObject.stam > 0){//if land is untilled, does not have plant, and current tool is hoe
             GetComponent<SpriteRenderer>().sprite = tilled;//update sprite
             isTilled = true;//set isTilled to true
             JackObject.stam = JackObject.stam - (5 - JackObject.hoe);//decreases stamina by 5 - tool level
         }
-        else if(JackObject.currentTool == "seeds" && isTilled && !(hasPlant) && JackObject.seeds < 0){//if current tool is seeds, land is tilled, and does not have a plant
+        else if(JackObject.currentTool == "seeds" && isTilled && !(hasPlant) && JackObject.seeds > 0){//if current tool is seeds, land is tilled, and does not have a plant
             GetComponent<SpriteRenderer>().sprite = stage1;//update sprite to stage 1
             currentStage = 1;//set current sage to 1
             hasPlant = true;//set hasPlant to true
             JackObject.seeds--;
         }
-        else if (JackObject.currentTool == "water" && !(isWatered) && hasPlant && JackObject.waterAmount < 0){//if current tool is water, and tile is unwattered, and tile has plant
+        else if (JackObject.currentTool == "water" && !(isWatered) && hasPlant && JackObject.waterAmount > 0 && JackObject.stam > 0){//if current tool is water, and tile is unwattered, and tile has plant
             if(currentStage == 1){//if current stage is stage 1
                 GetComponent<SpriteRenderer>().sprite = stage1W;//update sprite
             }
@@ -56,7 +56,7 @@ public class PlantBehavior : MonoBehaviour{
             currentStage = 0;//reset current stage
             timesWatered = 0;//reset times watered
         }
-         else if(JackObject.currentTool == "hammer" && !(hasPlant) && isTilled){//ifcurrent tool is hammer and there is no plant, and the tile is tilled
+         else if(JackObject.currentTool == "hammer" && !(hasPlant) && isTilled && JackObject.stam > 0){//ifcurrent tool is hammer and there is no plant, and the tile is tilled
             GetComponent<SpriteRenderer>().sprite = untilled;//update sprite
             isTilled = false;//set isTilled to false
             isWatered = false;//set isWatered to false
@@ -64,7 +64,7 @@ public class PlantBehavior : MonoBehaviour{
             timesWatered = 0;//set times watered to 0
             JackObject.stam = JackObject.stam - (5 - JackObject.hammer);
         }
-         else if(JackObject.currentTool == "sickle" && hasPlant){//if there is a plant and the sickle is the current tool
+         else if(JackObject.currentTool == "sickle" && hasPlant && JackObject.stam > 0){//if there is a plant and the sickle is the current tool
             GetComponent<SpriteRenderer>().sprite = tilled;//update sprite
             currentStage = 0;//set current stage to 0
             timesWatered = 0;//restes times watered

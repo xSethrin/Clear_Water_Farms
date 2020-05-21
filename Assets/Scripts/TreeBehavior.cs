@@ -18,7 +18,7 @@ public class TreeBehavior : MonoBehaviour{
     */
     void OnMouseDown(){
         if(ableToChop){
-            if(JackObject.currentTool == "axe"  && notChopped){//checks if the axe is the current tool 
+            if(JackObject.currentTool == "axe"  && notChopped && JackObject.stam > 0){//checks if the axe is the current tool 
                 if(isBig){//checks if the tree is big
                     if(timesHit >= 5){
                         GetComponent<SpriteRenderer>().sprite = noTree;

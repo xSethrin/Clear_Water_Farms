@@ -16,9 +16,10 @@ public class CowBehavior : MonoBehaviour{
     */
     void OnMouseDown(){
         if(hasCow){//only do stuff if there is a cow
-           if(!(wasFed) && JackObject.currentTool == "water"){//if statment to feed cow
+           if(!(wasFed) && JackObject.currentTool == "fodder" && JackObject.fodder > 0){//if statment to feed cow
                GetComponent<SpriteRenderer>().sprite = cowFed;//update sprite
                wasFed = true;
+               JackObject.fodder--;
            }
            if(hasMilk && JackObject.currentTool == "hand"){//if statment to milk cow
                 //Adding to inventory
