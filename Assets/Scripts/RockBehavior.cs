@@ -19,6 +19,7 @@ public class RockBehavior : MonoBehaviour{
                 }
                 else{
                     timesHit++;
+                    JackObject.stam = JackObject.stam - (5 - JackObject.hammer);
                 }
             }
             else{
@@ -31,6 +32,7 @@ public class RockBehavior : MonoBehaviour{
                 }
                 else{ 
                     timesHit++;
+                    JackObject.stam = JackObject.stam - (5 - JackObject.hammer);
                 }
             }
         }

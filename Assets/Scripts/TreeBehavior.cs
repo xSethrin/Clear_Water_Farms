@@ -28,6 +28,7 @@ public class TreeBehavior : MonoBehaviour{
                     }
                     else{
                         timesHit++;//increase times hit
+                        JackObject.stam = JackObject.stam - (5 - JackObject.axe);
                     }
                 }
                 else{//checks if tree is hit
@@ -40,6 +41,7 @@ public class TreeBehavior : MonoBehaviour{
                     }
                     else{
                         timesHit++;
+                        JackObject.stam = JackObject.stam - (5 - JackObject.axe);
                     }
                 }
             

@@ -150,13 +150,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee44c6b3591ec0c468d782c490055f51, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   tree: {fileID: 21300000, guid: 1137a19691ef4d44395faae9ed4e7aa1, type: 3}
-  noTree: {fileID: 0}
+  noTree: {fileID: 21300000, guid: 79c68a7f58a85af479e4a8d902aace4c, type: 3}
   timesHit: 0
   notChopped: 1
-  isBig: 0
+  isBig: 1
+  ableToChop: 1
 --- !u!60 &2119701558
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -215,5 +216,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62ca281e71a84f84aa9d92876cd7bb31, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
