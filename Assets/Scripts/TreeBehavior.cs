@@ -10,38 +10,40 @@ public class TreeBehavior : MonoBehaviour{
 
     public Sprite tree, noTree;
     public int timesHit = 0; 
-    public bool notChopped = true, isBig;
+    public bool notChopped = true, isBig, ableToChop;
 
     /**
     * This method acts as hitting the tree with your axe
     *
     */
     void OnMouseDown(){
-        if(JackObject.currentTool == "axe"  && notChopped){//checks if the axe is the current tool 
-            if(isBig){//checks if the tree is big
-                if(timesHit >= 5){
-                    GetComponent<SpriteRenderer>().sprite = noTree;
-                    JackObject.lumber+= 3;//adds to lumber
-                    notChopped = false;//set notchopped to false
-                    JackObject.stam = JackObject.stam - (5 - JackObject.axe);
+        if(ableToChop){
+            if(JackObject.currentTool == "axe"  && notChopped){//checks if the axe is the current tool 
+                if(isBig){//checks if the tree is big
+                    if(timesHit >= 5){
+                        GetComponent<SpriteRenderer>().sprite = noTree;
+                        JackObject.lumber+= 3;//adds to lumber
+                        notChopped = false;//set notchopped to false
+                        JackObject.stam = JackObject.stam - (5 - JackObject.axe);
+                    }
+                    else{
+                        timesHit++;//increase times hit
+                    }
                 }
-                else{
-                    timesHit++;//increase times hit
-                }
-            }
-            else{//checks if tree is hit
-                if(timesHit >= 3){
-                    GetComponent<SpriteRenderer>().sprite = noTree;
-                    JackObject.lumber+= 1;
-                    notChopped = false;
-                    JackObject.stam = JackObject.stam - (5 - JackObject.axe);
+                else{//checks if tree is hit
+                    if(timesHit >= 3){
+                        GetComponent<SpriteRenderer>().sprite = noTree;
+                        JackObject.lumber+= 1;
+                        notChopped = false;
+                        JackObject.stam = JackObject.stam - (5 - JackObject.axe);
 
+                    }
+                    else{
+                        timesHit++;
+                    }
                 }
-                else{
-                    timesHit++;
-                }
+            
             }
-          
         }
     }
     
