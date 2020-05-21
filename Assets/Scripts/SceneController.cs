@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-
+    public Animator animator; 
     public static string prevScene = "";
     public static string currentScene = "";
 
@@ -15,9 +15,15 @@ public class SceneController : MonoBehaviour
         currentScene = SceneManager.GetActiveScene().name;
     }
 
+    public void FadeToLevel(string level){
+
+    }
+
     public void LoadScene(string sceneName)
     {
+
         prevScene = currentScene;
+        animator.SetTrigger("fade_Out");
         SceneManager.LoadScene(sceneName);
     }
 
