@@ -7,7 +7,7 @@ using UnityEngine;
 *
 */
 public class NewDayScript : MonoBehaviour{
-
+    
     /**
     * This method updates data for the start of each day
     * It is ran when the player goes to sleep (clicks on the bed)
@@ -41,5 +41,8 @@ public class NewDayScript : MonoBehaviour{
         }
         SaveSystem save = new SaveSystem();//creates a save object
         save.SaveGame(new GameData());//saves your game
+        
+        
+
     }
 }

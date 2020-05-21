@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4796255830380168474}
   - component: {fileID: 3015583690230817991}
+  - component: {fileID: 6923044261581768976}
   - component: {fileID: 61897845147714258}
   - component: {fileID: 114924187463785722}
   m_Layer: 0
@@ -81,6 +82,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6923044261581768976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7812362516191030562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 644e2fae65b72dc48b70d3283c670569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toScene: Farm_House_Interrior
 --- !u!61 &61897845147714258
 BoxCollider2D:
   m_ObjectHideFlags: 0
