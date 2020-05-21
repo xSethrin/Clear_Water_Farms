@@ -19,33 +19,27 @@ public GameObject[] tools;
         if(Input.GetKey("1")){
             JackObject.currentTool = "hand";
             //Inventory.GetComponent<Image>().color = selected;
-            Debug.Log("Switched to hand");
         }
         if(Input.GetKey("2")){
             JackObject.currentTool = "water";
-            Debug.Log("Switched to water");
 
         }
         if (Input.GetKey("3")){
                 JackObject.currentTool = "hoe";
-                Debug.Log("Switched to hoe");
 
         }
         if (Input.GetKey("4")){
             JackObject.currentTool = "sickle";
-            Debug.Log("Switched to sickle");
 
         }
 
         if (Input.GetKey("5")){
             JackObject.currentTool = "hammer";
-            Debug.Log("Switched to hammer");
 
         }
 
         if (Input.GetKey("6")){
             JackObject.currentTool = "axe";
-            Debug.Log("Switched to axe");
         }
         if(Input.GetKey("7")){
             JackObject.currentTool = "fodder";

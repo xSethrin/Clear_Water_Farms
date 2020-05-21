@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+* This is the script for when the player clicks on the new game text on title screen
+* It fills the cow, plant, and chicken data in the FarmData object.
+*/
 public class Title_ChangeScene : MonoBehaviour
 {
     [SerializeField] private string toScene = null;
@@ -13,9 +17,8 @@ public class Title_ChangeScene : MonoBehaviour
         sceneController = GameObject.FindGameObjectWithTag("GameController").GetComponent<SceneController>();
     }
 
-    void OnMouseDown()
-    {
-        Debug.Log("clicked");
+    void OnMouseDown(){
+        
         for(int i = 0; i < 255; i++){
             FarmData.timesWatered[i] = 0;
             FarmData.currentStage[i] = 0;

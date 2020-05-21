@@ -39,6 +39,6 @@ public class RockBehavior : MonoBehaviour{
     public void ResetRock(){
         notBroken = true;
         GetComponent<SpriteRenderer>().sprite = rock;
-        timesHit =0;
+        timesHit = 0;
     }
 }
