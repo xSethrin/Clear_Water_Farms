@@ -5,17 +5,10 @@ using UnityEngine;
 public class Shop_Script : MonoBehaviour
 {
     
-    private int seedsCost = 20;
-    private int seedsCount = 1;
-    private int cowCost = 650;
-    private int cowInventory = 10;
-    private int chickenInventory = 10;
-    private int chickenCost = 350;
-    private int[] level1 ={10,10,200};//[lumber, ore, gold]
-    private int[] level2 ={25,25,300};
-    private int[] level3 ={50,50,400};
-    private int[] level4 ={100,100,500}; 
-    public GameObject AxeMessage, HammerMessage, HoeMessage, SickleMessage, WaterMessage;
+    private int seedsCost = 20, seedsCount = 1, cowCost = 650, cowInventory = 10, chickenInventory = 10, chickenCost = 350, fodderCost = 10;
+    private int[] level1 ={10,10,200}, level2 ={25,25,300}, level3 ={50,50,400}, level4 ={100,100,500}; 
+    public GameObject AxeMessage, HammerMessage, HoeMessage, SickleMessage, WaterMessage, BuyFodderMessage, BuyCowMessage, BuyChickenMessage, SellMilkMessage, 
+    SellEggMessage, BuySeedMessage, sellTomatoMessage;
 
 
 /*
@@ -23,15 +16,21 @@ Method for selling tomatoes
 */
     public  void sellTomatoes()
     {
+        bool flag = true;
         for(int i=0; i < JackObject.slots.Count; i++)
         {
             if (JackObject.slots[i].produceName == "tomato")
             {
                 JackObject.gold = JackObject.gold + (JackObject.slots[i].quantity * JackObject.slots[i].price);
                 JackObject.slots.RemoveAt(i);
+                SellTomoatoMessage.GetComponent<UnityEngine.UI.Text>().text = "Sold Tomatoes";
+                flag = false;
             }
         }
-        Debug.Log("Selling Tomatoes");
+        if(flag){
+            SellTomoatoMessage.GetComponent<UnityEngine.UI.Text>().text = "No Tomatoes to Sell";
+
+        }
     }
 
     /*
@@ -50,9 +49,11 @@ Method for buying seeds.
         {
             JackObject.gold -= seedsCost;
             JackObject.seeds +=seedsCount;
+            BuySeedMessage.GetComponent<UnityEngine.UI.Text>().text = "Bought Seeds";
         }
-        Debug.Log(JackObject.gold + " " + JackObject.seeds);
-        //Debug.Log("Buying Seeds");
+        else{
+            BuySeedMessage.GetComponent<UnityEngine.UI.Text>().text = "Insufficient Funds";
+        }
     }
 /*
 Method for upgrading axe
@@ -259,6 +260,23 @@ Method for upgrading watering can
             WaterMessage.GetComponent<UnityEngine.UI.Text>().text = "Insufficient Funds";
         }
     }
+
+    /**
+    * This method is used for buying fodder
+    *
+    */
+    public void BuyFodder(){
+        if(JackObject.gold >= fodderCost){
+            JackObject.fodder++;
+            JackObject.gold-=10;
+            BuyFodderMessage.GetComponent<UnityEngine.UI.Text>().text = "Bought Fodder";
+        }
+        else{
+            BuyFodderMessage.GetComponent<UnityEngine.UI.Text>().text = "Insufficient Funds";
+        }
+        
+    }
+
 /*
 Method for buying Cows
 */
@@ -274,14 +292,17 @@ Method for buying Cows
                     FarmData.hasCow[i] = true;
                     JackObject.gold -= cowCost;
                     i = cowInventory;
-                    Debug.Log(JackObject.gold + " "+"Bought cow");
+                    BuyCowMessage.GetComponent<UnityEngine.UI.Text>().text = "Bought a Cow";
                     flag = false;
                 }
             }
             if (flag)
             {
-                Debug.Log("Full on cows");
+                BuyCowMessage.GetComponent<UnityEngine.UI.Text>().text = "Barn Full";
             }
+        }
+        else{
+            BuyCowMessage.GetComponent<UnityEngine.UI.Text>().text = "Insufficient Funds";
         }
     }
 /*
@@ -299,51 +320,60 @@ Method for buying chickens
                     FarmData.hasChicken[i] = true;
                     JackObject.gold -= chickenCost;
                     i = chickenInventory;
-                    Debug.Log(JackObject.gold + " "+"Bought chicken");
+                    BuyChickenMessage.GetComponent<UnityEngine.UI.Text>().text = "Bought a Chicken";
                     flag = false;
                 }
             }
             if (flag)
             {
-                Debug.Log("Full on chickens");
+                BuyChickenMessage.GetComponent<UnityEngine.UI.Text>().text = "Coop Full";
             }
             
 
         }
-       // Debug.Log("Buying Chicken");
+        else{
+            BuyChickenMessage.GetComponent<UnityEngine.UI.Text>().text = "Insufficient Funds";
+        }
     }
 /*
 Method for selling milk
 */
     public void SellMilk()
     {
-       for(int i=0; i < JackObject.slots.Count; i++)
+        bool flag = true;
+        for(int i=0; i < JackObject.slots.Count; i++)
         {
             if (JackObject.slots[i].produceName == "milk")
             {
                 JackObject.gold = JackObject.gold + (JackObject.slots[i].quantity * JackObject.slots[i].price);
                 JackObject.slots.RemoveAt(i);
-                
+                SellMilkMessage.GetComponent<UnityEngine.UI.Text>().text = "Sold Milk"; 
+                flag = false;   
             }
+                
         }
-        Debug.Log("Selling milk");
+        if(flag){
+            SellMilkMessage.GetComponent<UnityEngine.UI.Text>().text = "No Milk to Sell";
+        }  
     }
 /*
 Method for selling eggs
 */
     public void SellEggs()
     {
+        bool flag = true;
         for(int i=0; i < JackObject.slots.Count; i++)
         {
             if (JackObject.slots[i].produceName == "egg")
             {
                 JackObject.gold = JackObject.gold + (JackObject.slots[i].quantity * JackObject.slots[i].price);
                 JackObject.slots.RemoveAt(i);
-                
+                SellEggMessage.GetComponent<UnityEngine.UI.Text>().text = "Sold Eggs"; 
+                flag = false;   
             }
         }
-        Debug.Log("Selling eggs");
-    }
-
-    
+        if(flag){
+            SellEggMessage.GetComponent<UnityEngine.UI.Text>().text = "No Eggs to Sell";
+        }
+    }  
 }
