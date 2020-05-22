@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3015583690230817991}
   - component: {fileID: 61897845147714258}
   - component: {fileID: 114924187463785722}
+  - component: {fileID: 2100589434221724591}
   m_Layer: 0
   m_Name: Bed
   m_TagString: Untagged
@@ -120,4 +121,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  sceneName: 
+  sceneName: Farm_House_Interrior
+--- !u!61 &2100589434221724591
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7812362516191030562}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.4266666, y: 2.9066668}
+    newSize: {x: 1.07, y: 2.18}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.4266666, y: 2.9066668}
+  m_EdgeRadius: 0
