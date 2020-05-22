@@ -1812,7 +1812,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bed
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6923044261581768976, guid: 4651ba3b0709eff41b4f4b9b3b54ba88, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4651ba3b0709eff41b4f4b9b3b54ba88, type: 3}
 --- !u!1001 &1233206426
 PrefabInstance:

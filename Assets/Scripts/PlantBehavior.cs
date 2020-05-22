@@ -13,6 +13,12 @@ public class PlantBehavior : MonoBehaviour{
     * changes depend on plant state and equipted tool 
     */
     void OnMouseDown(){
+        //temp for testing 
+        Debug.Log("timesWatered: " + timesWatered);
+        Debug.Log("currentStage: " + currentStage);
+        Debug.Log("isWatered: " + isWatered);
+        Debug.Log("isTilled: " + isTilled);
+        Debug.Log("hasPlant: " + hasPlant);
 
         if(JackObject.currentTool == "hoe" && !(isTilled) && !(hasPlant) && JackObject.stam > 0){//if land is untilled, does not have plant, and current tool is hoe
             GetComponent<SpriteRenderer>().sprite = tilled;//update sprite
