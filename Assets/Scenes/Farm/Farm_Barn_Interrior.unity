@@ -482,13 +482,13 @@ PrefabInstance:
         type: 3}
       propertyPath: cowNotFed
       value: 
-      objectReference: {fileID: 21300000, guid: da391e05c0c2f654d973c80cba610d07,
+      objectReference: {fileID: 21300000, guid: 24d777e02b8020646988725ec35a7376,
         type: 3}
     - target: {fileID: 4248233703820976397, guid: a28df238f98d79d4093dfb45047b6632,
         type: 3}
       propertyPath: cowFed
       value: 
-      objectReference: {fileID: 21300000, guid: 24d777e02b8020646988725ec35a7376,
+      objectReference: {fileID: 21300000, guid: da391e05c0c2f654d973c80cba610d07,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a28df238f98d79d4093dfb45047b6632, type: 3}
