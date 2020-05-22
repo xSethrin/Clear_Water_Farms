@@ -27,26 +27,13 @@ public class Title_ChangeScene : MonoBehaviour
             FarmData.hasPlant[i] = false;
         }
         for(int i = 0; i< 10; i++){
-            if(i == 0){//testing
-                FarmData.hasChicken[i] = true;
-                FarmData.chickenWasFed[i] = false;
-                FarmData.hasEgg[i] = true;
-                FarmData.hasCow[i] = true;
-                FarmData.cowWasFed[i] = false;
-                FarmData.hasMilk[i] = true;
-            }
-            else{
-                FarmData.hasChicken[i] = false;
-                FarmData.chickenWasFed[i] = false;
-                FarmData.hasEgg[i] = false;
-                FarmData.hasCow[i] = false;
-                FarmData.cowWasFed[i] = false;
-                FarmData.hasMilk[i] = false;
-            }
-            
-
+            FarmData.hasChicken[i] = false;
+            FarmData.chickenWasFed[i] = false;
+            FarmData.hasEgg[i] = false;
+            FarmData.hasCow[i] = false;
+            FarmData.cowWasFed[i] = false;
+            FarmData.hasMilk[i] = false;
         }
-
             sceneController.LoadScene(toScene);//loading new scene
     }
 }
