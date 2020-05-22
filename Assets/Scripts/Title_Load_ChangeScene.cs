@@ -35,7 +35,7 @@ public class Title_Load_ChangeScene : MonoBehaviour
         int [] timesWatered = data.timesWatered;
         int [] isTilled = data.isTilled;
         int [] hasPlant = data.hasPlant;
-        JackObject.stam = 150;//restes jacks stamina
+        JackObject.stam = 300;//restes jacks stamina
         //the following lines set all of jacks data back to what was saved
         JackObject.gold = playerData[0];
         JackObject.water = playerData[1];   

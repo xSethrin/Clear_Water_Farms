@@ -16,7 +16,7 @@ public class NewDayScript : MonoBehaviour{
     * It is ran when the player goes to sleep (clicks on the bed)
     */
     void OnMouseDown(){
-        JackObject.stam = 150;//resets stamina
+        JackObject.stam = 300;//resets stamina
         for(int i = 0; i < 255; i++){//loops through all the plants
             if(FarmData.timesWatered[i] >= 3){//if plant was watered 3 times it is ready to grow to the next stage
                 FarmData.currentStage[i]++;
