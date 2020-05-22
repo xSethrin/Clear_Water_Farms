@@ -20,7 +20,6 @@ public class SaveSystem {
         FileStream stream = new FileStream(path, FileMode.Create);//This opens the file stream
         formatter.Serialize(stream, data);//binary data is written to a file
         stream.Close();//clsoe the stream to prevent bugs
-        Debug.Log("Game Saved!");
     }
 
     /**

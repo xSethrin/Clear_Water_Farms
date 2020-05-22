@@ -57,7 +57,7 @@ public class ChangeScene : MonoBehaviour {
                     i++;
                 }
             }
+            sceneController.LoadScene(toScene);//loading new scene 
         }
-        sceneController.LoadScene(toScene);//loading new scene  
     }
 }
