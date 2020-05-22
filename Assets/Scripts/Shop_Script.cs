@@ -8,7 +8,7 @@ public class Shop_Script : MonoBehaviour
     private int seedsCost = 20, seedsCount = 1, cowCost = 650, cowInventory = 10, chickenInventory = 10, chickenCost = 350, fodderCost = 10;
     private int[] level1 ={10,10,200}, level2 ={25,25,300}, level3 ={50,50,400}, level4 ={100,100,500}; 
     public GameObject AxeMessage, HammerMessage, HoeMessage, SickleMessage, WaterMessage, BuyFodderMessage, BuyCowMessage, BuyChickenMessage, SellMilkMessage, 
-    SellEggMessage, BuySeedMessage, sellTomatoMessage;
+    SellEggMessage, BuySeedMessage, SellTomatoMessage;
 
 
 /*
@@ -23,12 +23,12 @@ Method for selling tomatoes
             {
                 JackObject.gold = JackObject.gold + (JackObject.slots[i].quantity * JackObject.slots[i].price);
                 JackObject.slots.RemoveAt(i);
-                SellTomoatoMessage.GetComponent<UnityEngine.UI.Text>().text = "Sold Tomatoes";
+                SellTomatoMessage.GetComponent<UnityEngine.UI.Text>().text = "Sold Tomatoes";
                 flag = false;
             }
         }
         if(flag){
-            SellTomoatoMessage.GetComponent<UnityEngine.UI.Text>().text = "No Tomatoes to Sell";
+            SellTomatoMessage.GetComponent<UnityEngine.UI.Text>().text = "No Tomatoes to Sell";
 
         }
     }
