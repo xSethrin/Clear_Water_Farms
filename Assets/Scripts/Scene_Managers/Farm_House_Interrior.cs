@@ -16,6 +16,8 @@ public class Farm_House_Interrior : SceneController
         {
             player.position = new Vector2(9.47f, -31.62f);
 
+        }else if(prevScene =="Farm_House_Interrior"){
+            player.position = new Vector2(14.82f, -24.43f);
         }
     }
 
