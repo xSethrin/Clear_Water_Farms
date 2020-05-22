@@ -1264,6 +1264,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Shop: {fileID: 828816506}
+  AxePriceText: {fileID: 0}
+  AxeLumberText: {fileID: 0}
+  AxeOreText: {fileID: 0}
+  AxeMessage: {fileID: 0}
+  HammerPriceText: {fileID: 0}
+  HammerLumberText: {fileID: 0}
+  HammerOreText: {fileID: 0}
+  HammerMessage: {fileID: 0}
+  HoePriceText: {fileID: 0}
+  HoeLumberText: {fileID: 0}
+  HoeOreText: {fileID: 0}
+  HoeMessage: {fileID: 0}
+  SicklePriceText: {fileID: 0}
+  SickleLumberText: {fileID: 0}
+  SickleOreText: {fileID: 0}
+  SickleMessage: {fileID: 0}
+  WaterPriceText: {fileID: 0}
+  WaterLumberText: {fileID: 0}
+  WaterOreText: {fileID: 0}
+  WaterMessage: {fileID: 0}
+  BuyFodderMessage: {fileID: 0}
+  BuyCowMessage: {fileID: 0}
+  BuyChickenMessage: {fileID: 0}
+  SellMilkMessage: {fileID: 0}
+  SellEggMessage: {fileID: 0}
+  BuySeedMessage: {fileID: 1347554727}
+  SellTomatoMessage: {fileID: 1565507195}
+  storeName: Plant Shop
 --- !u!61 &276465813
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2016,7 +2044,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be136996deb6edf41b83677cd6b0ddf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FloatingTextPrefab: {fileID: 0}
+  AxeMessage: {fileID: 0}
+  HammerMessage: {fileID: 0}
+  HoeMessage: {fileID: 0}
+  SickleMessage: {fileID: 0}
+  WaterMessage: {fileID: 0}
+  BuyFodderMessage: {fileID: 0}
+  BuyCowMessage: {fileID: 0}
+  BuyChickenMessage: {fileID: 0}
+  SellMilkMessage: {fileID: 0}
+  SellEggMessage: {fileID: 0}
+  BuySeedMessage: {fileID: 1347554727}
+  SellTomatoMessage: {fileID: 1565507195}
 --- !u!1 &745913623
 GameObject:
   m_ObjectHideFlags: 0
@@ -2714,7 +2753,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3eb3ab8689c952b4da7912a0ccbec090, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
