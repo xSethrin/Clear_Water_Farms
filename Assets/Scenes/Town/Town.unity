@@ -122,11 +122,9 @@ GameObject:
   m_Component:
   - component: {fileID: 157043280}
   - component: {fileID: 157043279}
-  - component: {fileID: 157043278}
-  - component: {fileID: 157043281}
   - component: {fileID: 157043277}
   m_Layer: 0
-  m_Name: Store_2
+  m_Name: PlantStore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,32 +165,6 @@ PolygonCollider2D:
       - {x: 6.69, y: -8.48}
       - {x: 6.6632996, y: -5.0451393}
       - {x: 5.969948, y: -4.3811455}
---- !u!61 &157043278
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 157043276}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 2.7530365, y: -7.7123127}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 18, y: 18}
-    newSize: {x: 18, y: 18}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.61159515, y: 1.4816017}
-  m_EdgeRadius: 0
 --- !u!212 &157043279
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -251,23 +223,82 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -14.49, y: 31.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 555742527}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &157043281
+--- !u!1 &183443831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 183443832}
+  - component: {fileID: 183443834}
+  - component: {fileID: 183443833}
+  m_Layer: 0
+  m_Name: door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &183443832
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183443831}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1736284189}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &183443833
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 157043276}
+  m_GameObject: {fileID: 183443831}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 644e2fae65b72dc48b70d3283c670569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toScene: Plant_Store_Interrior
+  toScene: Blacksmith_Store_Interrior
+--- !u!61 &183443834
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183443831}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 2.77489, y: -7.682973}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.66701317, y: 1.4992485}
+  m_EdgeRadius: 0
 --- !u!1 &238363491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2496,7 +2527,7 @@ PrefabInstance:
     - target: {fileID: 4730869300782836415, guid: c59f1a3affce27d45aaa8ae157260381,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4730869300782836415, guid: c59f1a3affce27d45aaa8ae157260381,
         type: 3}
@@ -2525,6 +2556,77 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c59f1a3affce27d45aaa8ae157260381, type: 3}
+--- !u!1 &555742526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 555742527}
+  - component: {fileID: 555742529}
+  - component: {fileID: 555742528}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &555742527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555742526}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 157043280}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &555742528
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555742526}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 2.757388, y: -7.704999}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5925045, y: 1.4480152}
+  m_EdgeRadius: 0
+--- !u!114 &555742529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555742526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 644e2fae65b72dc48b70d3283c670569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toScene: Plant_Store_Interrior
 --- !u!1001 &803976468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2570,7 +2672,7 @@ PrefabInstance:
     - target: {fileID: 6932966283399301138, guid: cda5c2124d00d8f4ba56b13e6c3a0de2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6932966283399301138, guid: cda5c2124d00d8f4ba56b13e6c3a0de2,
         type: 3}
@@ -69240,43 +69342,15 @@ GameObject:
   m_Component:
   - component: {fileID: 1101239007}
   - component: {fileID: 1101239006}
-  - component: {fileID: 1101239005}
   - component: {fileID: 1101239004}
-  - component: {fileID: 1101239008}
   m_Layer: 0
-  m_Name: Store_3
+  m_Name: AnimalStore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1101239004
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1101239003}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 2.7582607, y: -7.694809}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 18, y: 18}
-    newSize: {x: 18, y: 18}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5736351, y: 1.4961205}
-  m_EdgeRadius: 0
---- !u!60 &1101239005
+--- !u!60 &1101239004
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69286,7 +69360,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -69301,16 +69375,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 2.187046, y: -4.3902683}
-      - {x: 1.5102692, y: -5.051073}
+    - - {x: 2.1733284, y: -4.4043083}
+      - {x: 1.4835815, y: -5.0665016}
       - {x: 1.4699999, y: -8.48}
-      - {x: 2.4113808, y: -8.445879}
-      - {x: 2.434555, y: -6.9141026}
-      - {x: 3.0833588, y: -6.9229507}
-      - {x: 3.1034927, y: -8.459866}
-      - {x: 6.643017, y: -8.453154}
-      - {x: 6.6631546, y: -5.0437584}
-      - {x: 5.9630203, y: -4.3768463}
+      - {x: 2.4208145, y: -8.4542675}
+      - {x: 2.4547558, y: -6.907653}
+      - {x: 3.0765305, y: -6.930644}
+      - {x: 3.035471, y: -8.439269}
+      - {x: 6.69, y: -8.48}
+      - {x: 6.662836, y: -5.0230827}
+      - {x: 6.0099998, y: -4.35}
 --- !u!212 &1101239006
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -69369,23 +69443,11 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -26.7, y: 22.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1489793617}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1101239008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1101239003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 644e2fae65b72dc48b70d3283c670569, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toScene: Animal_Store_Interrior
 --- !u!1 &1452605697
 GameObject:
   m_ObjectHideFlags: 0
@@ -69542,6 +69604,77 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1826a694b407bf468116bd7e55f39fd, type: 3}
+--- !u!1 &1489793616
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1489793617}
+  - component: {fileID: 1489793619}
+  - component: {fileID: 1489793618}
+  m_Layer: 0
+  m_Name: door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1489793617
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489793616}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1101239007}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1489793618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489793616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 644e2fae65b72dc48b70d3283c670569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toScene: Animal_Store_Interrior
+--- !u!61 &1489793619
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489793616}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 2.7615833, y: -7.697629}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6120033, y: 1.5508442}
+  m_EdgeRadius: 0
 --- !u!1 &1592116142
 GameObject:
   m_ObjectHideFlags: 0
@@ -69885,11 +70018,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1736284189}
   - component: {fileID: 1736284188}
-  - component: {fileID: 1736284187}
   - component: {fileID: 1736284186}
-  - component: {fileID: 1736284190}
   m_Layer: 0
-  m_Name: Store
+  m_Name: BlackSmith
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69930,32 +70061,6 @@ PolygonCollider2D:
       - {x: 6.69, y: -8.48}
       - {x: 6.662174, y: -5.0318785}
       - {x: 5.9682617, y: -4.3824635}
---- !u!61 &1736284187
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736284185}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 2.7377338, y: -7.710663}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 18, y: 18}
-    newSize: {x: 18, y: 18}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.62374496, y: 1.46241}
-  m_EdgeRadius: 0
 --- !u!212 &1736284188
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -70014,23 +70119,11 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -26.72, y: 10.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 183443832}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1736284190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736284185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 644e2fae65b72dc48b70d3283c670569, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toScene: Blacksmith_Store_Interrior
 --- !u!1 &1753998211
 GameObject:
   m_ObjectHideFlags: 0

@@ -200,6 +200,7 @@ GameObject:
   - component: {fileID: 123270184}
   - component: {fileID: 123270183}
   - component: {fileID: 123270182}
+  - component: {fileID: 123270186}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -268,6 +269,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &123270186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123270181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be136996deb6edf41b83677cd6b0ddf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FloatingTextPrefab: {fileID: 0}
 --- !u!1 &193022768
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,7 +1495,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 123270186}
         m_MethodName: BuyChicken
         m_Mode: 1
         m_Arguments:
@@ -1907,7 +1921,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 123270186}
         m_MethodName: SellEggs
         m_Mode: 1
         m_Arguments:
@@ -2398,7 +2412,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 123270186}
         m_MethodName: SellMilk
         m_Mode: 1
         m_Arguments:
@@ -3854,7 +3868,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 123270186}
         m_MethodName: BuyCow
         m_Mode: 1
         m_Arguments:
