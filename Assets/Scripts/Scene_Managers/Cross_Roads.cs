@@ -14,7 +14,7 @@ public class Cross_Roads : SceneController
 
         if (prevScene == "Forest")
         {
-            player.position = new Vector2(26.06f, -33.62f);
+            player.position = new Vector2(26.06f, -34.82f);
 
         }
         else if (prevScene == "Town")
