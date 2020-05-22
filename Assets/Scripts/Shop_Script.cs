@@ -5,19 +5,19 @@ using UnityEngine;
 public class Shop_Script : MonoBehaviour
 {
     
-    public GameObject FloatingTextPrefab;
     private int seedsCost = 20;
     private int seedsCount = 1;
     private int cowCost = 650;
     private int cowInventory = 10;
-    private int milkCost = 150;
-    private int eggCost = 80;
     private int chickenInventory = 10;
     private int chickenCost = 350;
     private int[] level1 ={10,10,200};//[lumber, ore, gold]
     private int[] level2 ={25,25,300};
     private int[] level3 ={50,50,400};
     private int[] level4 ={100,100,500}; 
+    public GameObject AxeMessage, HammerMessage, HoeMessage, SickleMessage, WaterMessage;
+
+
 /*
 Method for selling tomatoes
 */
@@ -33,6 +33,7 @@ Method for selling tomatoes
         }
         Debug.Log("Selling Tomatoes");
     }
+
     /*
     Method for testing output on button click
     */
@@ -64,33 +65,35 @@ Method for upgrading axe
             JackObject.lumber -= level1[0];
             JackObject.ore -= level1[1];
             JackObject.gold -= level1[2];
-            Debug.Log("Upgrading Axe to level "+ JackObject.axe+" lumber = "+JackObject.lumber+" ore = "+JackObject.ore+" gold "+ JackObject.gold);
+            AxeMessage.GetComponent<UnityEngine.UI.Text>().text = "Tool Upgraded";
         }else if (JackObject.axe == 1 && JackObject.lumber >= level2[0] && JackObject.ore >= level2[1] && JackObject.gold >= level2[2])
         {
             JackObject.axe = 2;
             JackObject.lumber -= level2[0];
             JackObject.ore -= level2[1];
             JackObject.gold -= level2[2];
-            Debug.Log("Upgrading Axe to level "+ JackObject.axe+" lumber = "+JackObject.lumber+" ore = "+JackObject.ore+" gold "+ JackObject.gold);
+            AxeMessage.GetComponent<UnityEngine.UI.Text>().text = "Tool Upgraded";
         }else if (JackObject.axe == 2 && JackObject.lumber >= level2[0] && JackObject.ore >= level2[1] && JackObject.gold >= level2[2])
         {
             JackObject.axe = 3;
             JackObject.lumber -= level2[0];
             JackObject.ore -= level2[1];
             JackObject.gold -= level2[2];
-            Debug.Log("Upgrading Axe to level "+ JackObject.axe+" lumber = "+JackObject.lumber+" ore = "+JackObject.ore+" gold "+ JackObject.gold);
+            AxeMessage.GetComponent<UnityEngine.UI.Text>().text = "Tool Upgraded";
         }else if (JackObject.axe == 3 && JackObject.lumber >= level3[0] && JackObject.ore >= level3[1] && JackObject.gold >= level3[2])
         {
             JackObject.axe = 4;
             JackObject.lumber -= level3[0];
             JackObject.ore -= level3[1];
             JackObject.gold -= level3[2];
-            Debug.Log("Upgrading Axe to level "+ JackObject.axe+" lumber = "+JackObject.lumber+" ore = "+JackObject.ore+" gold "+ JackObject.gold);
+            AxeMessage.GetComponent<UnityEngine.UI.Text>().text = "Tool Upgraded";
         }else if (JackObject.axe == 4 )
         {
-              Debug.Log("Your Axe is already maxed at level"+ JackObject.axe);
+            AxeMessage.GetComponent<UnityEngine.UI.Text>().text = "Tool Fully Upgraded";
+            //Debug.Log("Your Axe is already maxed at level"+ JackObject.axe);
         }else{
-            Debug.Log("you don't have enough to upgrade");
+            AxeMessage.GetComponent<UnityEngine.UI.Text>().text = "Insufficient Funds";
+            //Debug.Log("you don't have enough to upgrade");
         }
     }
  /*
@@ -104,35 +107,37 @@ Method for upgrading hammer
             JackObject.lumber -= level1[0];
             JackObject.ore -= level1[1];
             JackObject.gold -= level1[2];
-            Debug.Log("Upgrading Hammer to level "+ JackObject.hammer+" lumber = "+JackObject.lumber+" ore = "+JackObject.ore+" gold "+ JackObject.gold);
+            HammerMessage.GetComponent<UnityEngine.UI.Text>().text = "Tool Upgraded";
         }else if (JackObject.hammer == 1 && JackObject.lumber >= level2[0] && JackObject.ore >= level2[1] && JackObject.gold >= level2[2])
         {
             JackObject.hammer = 2;
             JackObject.lumber -= level2[0];
             JackObject.ore -= level2[1];
             JackObject.gold -= level2[2];
-            Debug.Log("Upgrading Hammer to level "+ JackObject.hammer+" lumber = "+JackObject.lumber+" ore = "+JackObject.ore+" gold "+ JackObject.gold);
+            HammerMessage.GetComponent<UnityEngine.UI.Text>().text = "Tool Upgraded";
         }else if (JackObject.hammer == 2 && JackObject.lumber >= level2[0] && JackObject.ore >= level2[1] && JackObject.gold >= level2[2])
         {
             JackObject.hammer = 3;
             JackObject.lumber -= level2[0];
             JackObject.ore -= level2[1];
             JackObject.gold -= level2[2];
-            Debug.Log("Upgrading Hammer to level "+ JackObject.hammer+" lumber = "+JackObject.lumber+" ore = "+JackObject.ore+" gold "+ JackObject.gold);
+            HammerMessage.GetComponent<UnityEngine.UI.Text>().text = "Tool Upgraded";
         }else if (JackObject.hammer == 3 && JackObject.lumber >= level3[0] && JackObject.ore >= level3[1] && JackObject.gold >= level3[2])
         {
             JackObject.hammer = 4;
             JackObject.lumber -= level3[0];
             JackObject.ore -= level3[1];
             JackObject.gold -= level3[2];
-            Debug.Log("Upgrading Hammer to level "+ JackObject.hammer+" lumber = "+JackObject.lumber+" ore = "+JackObject.ore+" gold "+ JackObject.gold);
+            HammerMessage.GetComponent<UnityEngine.UI.Text>().text = "Tool Upgraded";
         }else if (JackObject.hammer == 4 )
         {
-              Debug.Log("Your Hammer is already maxed at level"+ JackObject.hammer);
-        }else{
-            Debug.Log("you don't have enough to upgrade");
+            HammerMessage.GetComponent<UnityEngine.UI.Text>().text = "Tool Fully Upgraded";
+        }
+        else{
+            HammerMessage.GetComponent<UnityEngine.UI.Text>().text = "Insufficient Funds";
         }
     }
+
 /*
 Method for upgrading hoe
 */
@@ -144,33 +149,33 @@ Method for upgrading hoe
             JackObject.lumber -= level1[0];
             JackObject.ore -= level1[1];
             JackObject.gold -= level1[2];
-            Debug.Log("Upgrading hoe to level "+ JackObject.hoe+" lumber = "+JackObject.lumber+" ore = "+JackObject.ore+" gold "+ JackObject.gold);
+            HoeMessage.GetComponent<UnityEngine.UI.Text>().text = "Tool Upgraded";
         }else if (JackObject.hoe == 1 && JackObject.lumber >= level2[0] && JackObject.ore >= level2[1] && JackObject.gold >= level2[2])
         {
             JackObject.hoe = 2;
             JackObject.lumber -= level2[0];
             JackObject.ore -= level2[1];
             JackObject.gold -= level2[2];
-            Debug.Log("Upgrading hoe to level "+ JackObject.hoe+" lumber = "+JackObject.lumber+" ore = "+JackObject.ore+" gold "+ JackObject.gold);
+            HoeMessage.GetComponent<UnityEngine.UI.Text>().text = "Tool Upgraded";
         }else if (JackObject.hoe == 2 && JackObject.lumber >= level2[0] && JackObject.ore >= level2[1] && JackObject.gold >= level2[2])
         {
             JackObject.hoe = 3;
             JackObject.lumber -= level2[0];
             JackObject.ore -= level2[1];
             JackObject.gold -= level2[2];
-            Debug.Log("Upgrading hoe to level "+ JackObject.hoe+" lumber = "+JackObject.lumber+" ore = "+JackObject.ore+" gold "+ JackObject.gold);
+            HoeMessage.GetComponent<UnityEngine.UI.Text>().text = "Tool Upgraded";
         }else if (JackObject.hoe == 3 && JackObject.lumber >= level3[0] && JackObject.ore >= level3[1] && JackObject.gold >= level3[2])
         {
             JackObject.hoe = 4;
             JackObject.lumber -= level3[0];
             JackObject.ore -= level3[1];
             JackObject.gold -= level3[2];
-            Debug.Log("Upgrading hoe to level "+ JackObject.hoe+" lumber = "+JackObject.lumber+" ore = "+JackObject.ore+" gold "+ JackObject.gold);
+            HoeMessage.GetComponent<UnityEngine.UI.Text>().text = "Tool Upgraded";
         }else if (JackObject.hoe == 4 )
         {
-              Debug.Log("Your hoe is already maxed at level"+ JackObject.hoe);
+            HoeMessage.GetComponent<UnityEngine.UI.Text>().text = "Tool Fully Upgraded";
         }else{
-            Debug.Log("you don't have enough to upgrade");
+            HoeMessage.GetComponent<UnityEngine.UI.Text>().text = "Insufficient Funds";
         }
     }
 /*
@@ -184,33 +189,33 @@ Method for upgrading sickle
             JackObject.lumber -= level1[0];
             JackObject.ore -= level1[1];
             JackObject.gold -= level1[2];
-            Debug.Log("Upgrading sickle to level "+ JackObject.sickle+" lumber = "+JackObject.lumber+" ore = "+JackObject.ore+" gold "+ JackObject.gold);
+            SickleMessage.GetComponent<UnityEngine.UI.Text>().text = "Tool Upgraded";
         }else if (JackObject.sickle == 1 && JackObject.lumber >= level2[0] && JackObject.ore >= level2[1] && JackObject.gold >= level2[2])
         {
             JackObject.sickle = 2;
             JackObject.lumber -= level2[0];
             JackObject.ore -= level2[1];
             JackObject.gold -= level2[2];
-            Debug.Log("Upgrading sickle to level "+ JackObject.sickle+" lumber = "+JackObject.lumber+" ore = "+JackObject.ore+" gold "+ JackObject.gold);
+            SickleMessage.GetComponent<UnityEngine.UI.Text>().text = "Tool Upgraded";
         }else if (JackObject.sickle == 2 && JackObject.lumber >= level2[0] && JackObject.ore >= level2[1] && JackObject.gold >= level2[2])
         {
             JackObject.sickle = 3;
             JackObject.lumber -= level2[0];
             JackObject.ore -= level2[1];
             JackObject.gold -= level2[2];
-            Debug.Log("Upgrading sickle to level "+ JackObject.sickle+" lumber = "+JackObject.lumber+" ore = "+JackObject.ore+" gold "+ JackObject.gold);
+            SickleMessage.GetComponent<UnityEngine.UI.Text>().text = "Tool Upgraded";
         }else if (JackObject.sickle == 3 && JackObject.lumber >= level3[0] && JackObject.ore >= level3[1] && JackObject.gold >= level3[2])
         {
             JackObject.sickle = 4;
             JackObject.lumber -= level3[0];
             JackObject.ore -= level3[1];
             JackObject.gold -= level3[2];
-            Debug.Log("Upgrading sickle to level "+ JackObject.sickle+" lumber = "+JackObject.lumber+" ore = "+JackObject.ore+" gold "+ JackObject.gold);
+            SickleMessage.GetComponent<UnityEngine.UI.Text>().text = "Tool Upgraded";
         }else if (JackObject.sickle == 4 )
         {
-              Debug.Log("Your sickle is already maxed at level"+ JackObject.sickle);
+            SickleMessage.GetComponent<UnityEngine.UI.Text>().text = "Tool Fully Upgraded";
         }else{
-            Debug.Log("you don't have enough to upgrade");
+            SickleMessage.GetComponent<UnityEngine.UI.Text>().text = "Insufficient Funds";
         }
     }
 /*
@@ -224,33 +229,34 @@ Method for upgrading watering can
             JackObject.lumber -= level1[0];
             JackObject.ore -= level1[1];
             JackObject.gold -= level1[2];
-            Debug.Log("Upgrading watering can to level "+ JackObject.water+" lumber = "+JackObject.lumber+" ore = "+JackObject.ore+" gold "+ JackObject.gold);
+            WaterMessage.GetComponent<UnityEngine.UI.Text>().text = "Tool Upgraded";
         }else if (JackObject.water == 1 && JackObject.lumber >= level2[0] && JackObject.ore >= level2[1] && JackObject.gold >= level2[2])
         {
             JackObject.water = 2;
             JackObject.lumber -= level2[0];
             JackObject.ore -= level2[1];
             JackObject.gold -= level2[2];
-            Debug.Log("Upgrading watering can to level "+ JackObject.water+" lumber = "+JackObject.lumber+" ore = "+JackObject.ore+" gold "+ JackObject.gold);
+            WaterMessage.GetComponent<UnityEngine.UI.Text>().text = "Tool Upgraded";
         }else if (JackObject.water == 2 && JackObject.lumber >= level2[0] && JackObject.ore >= level2[1] && JackObject.gold >= level2[2])
         {
             JackObject.water = 3;
             JackObject.lumber -= level2[0];
             JackObject.ore -= level2[1];
             JackObject.gold -= level2[2];
-            Debug.Log("Upgrading watering can to level "+ JackObject.water+" lumber = "+JackObject.lumber+" ore = "+JackObject.ore+" gold "+ JackObject.gold);
+            WaterMessage.GetComponent<UnityEngine.UI.Text>().text = "Tool Upgraded";
         }else if (JackObject.water == 3 && JackObject.lumber >= level3[0] && JackObject.ore >= level3[1] && JackObject.gold >= level3[2])
         {
             JackObject.water = 4;
             JackObject.lumber -= level3[0];
             JackObject.ore -= level3[1];
             JackObject.gold -= level3[2];
-            Debug.Log("Upgrading watering can to level "+ JackObject.water+" lumber = "+JackObject.lumber+" ore = "+JackObject.ore+" gold "+ JackObject.gold);
+            WaterMessage.GetComponent<UnityEngine.UI.Text>().text = "Tool Upgraded";
         }else if (JackObject.water == 4 )
         {
-              Debug.Log("Your watering can is already maxed at level"+ JackObject.water);
-        }else{
-            Debug.Log("you don't have enough to upgrade");
+            WaterMessage.GetComponent<UnityEngine.UI.Text>().text = "Tool Fully Upgraded";
+        }
+        else{
+            WaterMessage.GetComponent<UnityEngine.UI.Text>().text = "Insufficient Funds";
         }
     }
 /*
