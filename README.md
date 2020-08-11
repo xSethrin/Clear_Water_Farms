@@ -1,4 +1,3 @@
-============================
 Clear Water Farms Readme
 ============================
 Table of Contents
@@ -9,7 +8,6 @@ Table of Contents
 4 - Controls
 5 - How To Play
 
-===========================
 1 - Introduction
 ===========================
 Clear Water Farms is a farming sim.  Take on the role of the owner of the farm and make as much
@@ -18,12 +16,12 @@ do not be mad if you find any bugs in the game.  There may be some!  The game is
 in its current stage it should be considered a prototype.  This is only the code for the game.
 If you want to test out the game please download the compiled version from itch.  (See 3 for details).
 
-==========================
+
 2 - Version History
 ==========================
 Version 0.9 - Finished Prototype
 
-==========================
+
 3 - Installation and Running 
 ==========================
 Clear Water Farms does not require installation.  To play the game please download the compiled version from:
@@ -31,7 +29,7 @@ https://xsethrin.itch.io/  To run the game see the readme on itch.
 
 Note:  There is a mac and PC version on itch.  Be sure to uploade the correct one. 
 
-==========================
+
 4 - Controls
 ==========================
 w - up
@@ -51,7 +49,7 @@ i - menu and inventory
 Using tools and interacting with the world is done through clicking 
 
 
-==========================
+
 5 - How To Play
 ==========================
 The objective of the game is to run the farm and make money.  To do this you need to sell
